@@ -1,12 +1,13 @@
 from queue import Queue
 from threading import Thread, Event
+from app import webserver, job
+import time
 import os
 import json
-import time
-
+import pandas as pd
 
 class ThreadPool:
-    def __init__(self):
+    def __init__(self, queue, job_statuses, graceful_shutdown):
         # You must implement a ThreadPool of TaskRunners
         # Your ThreadPool should check if an environment variable TP_NUM_OF_THREADS is defined
         # If the env var is defined, that is the number of threads to be used by the thread pool
@@ -16,48 +17,52 @@ class ThreadPool:
         #   * create more threads than the hardware concurrency allows
         #   * recreate threads for each task
         # Note: the TP_NUM_OF_THREADS env var will be defined by the checker
-        if 'TP_NUM_OF_THREADS' in os.environ:
-            self.num_threads = int(os.environ['TP_NUM_OF_THREADS'])
-        else:
-            self.num_threads = os.cpu_count()
-        self.task_queue = Queue()
-        self.threads = []
-        self.shutdown_event = Event()
-        self._create_threads()
+        self.queue = queue
+        self.job_statuses = job_statuses
+        self.graceful_shutdown = graceful_shutdown
         
-    def _create_threads(self):
-        for _ in range(self.num_threads):
-            thread = TaskRunner()
+        self.threads = []
+
+        if os.getenv("TP_NUM_OF_THREADS") is not None:
+            num_threads = int(os.getenv("TP_NUM_OF_THREADS"))
+        else:
+            num_threads = os.cpu_count()
+        for i in range(num_threads):
+            thread = TaskRunner(self.queue, self.job_statuses, self.graceful_shutdown, i)
             self.threads.append(thread)
+
+    def start(self):
+        for thread in self.threads:
             thread.start()
 
-    def add_task(self, task):
-        # Add task to the queue
-        self.task_queue.put(task)
-
-    def wait_completion(self):
-        # Wait for all tasks to be completed
-        self.task_queue.join()
-
     def shutdown(self):
-        # Shutdown the ThreadPool
-        # This should also stop all the threads in the pool
-        self.shutdown_event.set()
-        for _ in range(self.num_threads):
-            self.task_queue.put(None)
+        self.graceful_shutdown.set()
         for thread in self.threads:
             thread.join()
-        self.task_queue.join()
 
 class TaskRunner(Thread):
-    def __init__(self):
-        # TODO: init necessary data structures 
-        pass
+    def __init__(self, queue, job_statuses, graceful_shutdown, id):
+        # TODO: init necessary data structures
+        super().__init__()
+        self.queue = queue
+        self.job_statuses = job_statuses
+        self.graceful_shutdown = graceful_shutdown
+        self.id = id
+    
+    def save_data_to_disk(self, data, job_id):
+        with open(f'results/{job_id}.json', 'w') as f:
+            json.dump(data, f)
+        
+    def start_job(self):
+        j = self.queue.get()
+        if j is None:
+            return
+        job_id = j.job_id
+        job_result = j.do_job()
+        save_data_to_disk(job_result, job_id)
+        self.job_statuses[job_id] = "done"
 
     def run(self):
-        while True:
-            # TODO
-            # Get pending job
-            # Execute the job and save the result to disk
-            # Repeat until graceful_shutdown
-            pass
+        while not self.shutdown_event.is_set():
+            self.start_job()
+    
