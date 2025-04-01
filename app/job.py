@@ -1,57 +1,94 @@
-from app.data_ingestor import DataIngestor
 from queue import Queue
-from app import webserver
 from flask import jsonify
 import pandas as pd
+from app import webserver
+
 class Job:
-    def __init__(self, job_id, question, status, data_ingestor):
+    def __init__(self, job_id, question, status):
         self.job_id = job_id
         self.question = question
         self.status = status
-        self.data_ingestor = data_ingestor
 
     def do_job(self):
         # subclasses should implement this method
         pass
 
 class JobStatesMean(Job):
-    def __init__(self, job_id, question, status, data_ingestor):
-        super().__init__(job_id, question, status, data_ingestor)
+    def __init__(self, job_id, question, status):
+        super().__init__(job_id, question, status)
     def do_job(self):
-        if self.question not in self.data_ingestor.questions_best_is_min and self.question not in self.data_ingestor.questions_best_is_max:
-            return {"error": "Invalid question"}
-        filtered_data = self.data_ingestor.data[self.data_ingestor.data['Question'] == self.question]
-        filtered_data = filtered_data[filtered_data['Year'] >= 2011]
-        filtered_data = filtered_data[filtered_data['Year'] <= 2022]
-        filtered_data = filtered_data.groupby('State')['Data_Value'].mean().reset_index()
-        filtered_data = filtered_data.sort_values(by='Data_Value', ascending=True)
-        return jsonify(filtered_data.to_dict(orient='records'))
+        state_means = {}
+        filtered_data = webserver.data_ingestor.data[webserver.data_ingestor.data['Question'] == self.question]
+        for state in filtered_data['LocationDesc']:
+            state_data = filtered_data[filtered_data['LocationDesc'] == state]
+            state_mean = state_data['Data_Value'].mean()
+            state_means[state] = state_mean
+        sorted_states = sorted(state_means.items(), key=lambda x: x[1])
+        result = {}
+        for state, mean in sorted_states:
+            result[state] = mean
+        return result
     
 class JobBest5(Job):
-    def __init__(self, job_id, question, status, data_ingestor):
-        super().__init__(job_id, question, status, data_ingestor)
+    def __init__(self, job_id, question, status):
+        super().__init__(job_id, question, status)
     
     def do_job(self):
-        if self.question not in self.data_ingestor.questions_best_is_min and self.question not in self.data_ingestor.questions_best_is_max:
-            return {"error": "Invalid question"}
-        filtered_data = self.data_ingestor.data[self.data_ingestor.data['Question'] == self.question]
-        filtered_data = filtered_data[filtered_data['Year'] >= 2011]
-        filtered_data = filtered_data[filtered_data['Year'] <= 2022]
-        filtered_data = filtered_data.groupby('State')['Data_Value'].mean().reset_index()
+        filtered_data = webserver.data_ingestor.data[webserver.data_ingestor.data['Question'] == self.question]
+        filtered_data = filtered_data.groupby('LocationDesc')['Data_Value'].mean().reset_index()
         filtered_data = filtered_data.sort_values(by='Data_Value', ascending=True)
         filtered_data = filtered_data.head(5)
-        return jsonify(filtered_data.to_dict(orient='records'))
+        result = {}
+        for index, row in filtered_data.iterrows():
+            result[row['LocationDesc']] = row['Data_Value']
+        return result
     
 class JobWorst5(Job):
-    def __init__(self, job_id, question, status, data_ingestor):
-        super().__init__(job_id, question, status, data_ingestor)
+    def __init__(self, job_id, question, status):
+        super().__init__(job_id, question, status)
     def do_job(self):
-        if self.question not in self.data_ingestor.questions_best_is_min and self.question not in self.data_ingestor.questions_best_is_max:
-            return {"error": "Invalid question"}
-        filtered_data = self.data_ingestor.data[self.data_ingestor.data['Question'] == self.question]
-        filtered_data = filtered_data[filtered_data['Year'] >= 2011]
-        filtered_data = filtered_data[filtered_data['Year'] <= 2022]
-        filtered_data = filtered_data.groupby('State')['Data_Value'].mean().reset_index()
+        filtered_data = webserver.data_ingestor.data[webserver.data_ingestor.data['Question'] == self.question]
+        filtered_data = filtered_data.groupby('LocationDesc')['Data_Value'].mean().reset_index()
         filtered_data = filtered_data.sort_values(by='Data_Value', ascending=False)
         filtered_data = filtered_data.head(5)
-        return jsonify(filtered_data.to_dict(orient='records'))
+        result = {}
+        for index, row in filtered_data.iterrows():
+            result[row['LocationDesc']] = row['Data_Value']
+        return result
+
+class JobStateMean(Job):
+    def __init__(self, job_id, question, state, status):
+        super().__init__(job_id, question, status)
+        self.state = state
+    def do_job(self):
+        filtered_data = webserver.data_ingestor.data[webserver.data_ingestor.data['Question'] == self.question]
+        filtered_data = filtered_data[filtered_data['LocationDesc'] == self.state]
+        filtered_data = filtered_data.groupby('LocationDesc')['Data_Value'].mean().reset_index()
+        filtered_data = filtered_data.sort_values(by='Data_Value', ascending=True)
+        value = 0
+        count = 0
+        for index, row in filtered_data.iterrows():
+            value += row['Data_Value']
+            count += 1
+        if count == 0:
+            return {"error": "No data found"}
+        mean = value / count
+        return {self.state, mean}
+    
+class JobGlobalMean(Job):
+    def __init__(self, job_id, question, status):
+        super().__init__(job_id, question, status)
+    def do_job(self):
+        value = 0
+        count = 0
+        question = self.question
+        filtered_data = webserver.data_ingestor.data[webserver.data_ingestor.data['Question'] == question]
+        filtered_data = filtered_data.groupby('LocationDesc')['Data_Value'].mean().reset_index()
+        filtered_data = filtered_data.sort_values(by='Data_Value', ascending=True)
+        for index, row in filtered_data.iterrows():
+            value += row['Data_Value']
+            count += 1
+        if count == 0:
+            return {"error": "No data found"}
+        mean = value / count
+        return {"global_mean", mean}

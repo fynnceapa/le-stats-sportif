@@ -1,6 +1,5 @@
 from queue import Queue
 from threading import Thread, Event
-from app import webserver, job
 import time
 import os
 import json
@@ -33,6 +32,7 @@ class ThreadPool:
 
     def start(self):
         for thread in self.threads:
+            print(f"Starting thread {thread.id}")
             thread.start()
 
     def shutdown(self):
@@ -49,7 +49,7 @@ class TaskRunner(Thread):
         self.graceful_shutdown = graceful_shutdown
         self.id = id
     
-    def save_data_to_disk(self, data, job_id):
+    def save_data(self, data, job_id):
         with open(f'results/{job_id}.json', 'w') as f:
             json.dump(data, f)
         
@@ -59,10 +59,9 @@ class TaskRunner(Thread):
             return
         job_id = j.job_id
         job_result = j.do_job()
-        save_data_to_disk(job_result, job_id)
-        self.job_statuses[job_id] = "done"
+        self.save_data(job_result, job_id)
 
     def run(self):
-        while not self.shutdown_event.is_set():
+        while not self.graceful_shutdown.is_set():
             self.start_job()
     

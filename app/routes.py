@@ -1,4 +1,5 @@
-from app import webserver, job
+from app import webserver
+from app import job
 from flask import request, jsonify
 import os
 import json
@@ -23,21 +24,20 @@ def post_endpoint():
 
 @webserver.route('/api/get_results/<job_id>', methods=['GET'])
 def get_response(job_id):
-    print(f"JobID is {job_id}")
+    print(f"!!!!JobID is {job_id}")
 
-    if webserver.job_id_counter < int(job_id):
+    if webserver.job_counter < int(job_id):
         return jsonify({
             'status': 'error',
             'reason': 'Invalid job_id'
         })
-    if webserver.job_statuses[int(job_id)] == 'done':
-        result_path = os.path.join('results', f'{job_id}.json')
-        if os.path.exists(result_path):
-            with open(result_path, 'r') as f:
-                result = json.load(f)
-            return jsonify({'status': 'done', 'data': result})
-        else:
-            return jsonify({'status': 'running'})
+    result_path = os.path.join('results', f'{job_id}.json')
+    if os.path.exists(result_path):
+        with open(result_path, 'r') as f:
+            result = json.load(f)
+        return jsonify({'status': 'done', 'data': result})
+    else:
+        return jsonify({'status': 'running'})
         
 def add_job(type, data):
     # Register job. Don't wait for task to finish
@@ -49,11 +49,11 @@ def add_job(type, data):
     webserver.job_statuses[job_id] = 'running'
 
     if type == 'best5':
-        jobb = job.JobBest5(job_id, data['question'], 'running', webserver.data_ingestor)
+        jobb = job.JobBest5(job_id, data['question'], 'running')
     elif type == 'worst5':
-        jobb = job.JobWorst5(job_id, data['question'], 'running', webserver.data_ingestor)
+        jobb = job.JobWorst5(job_id, data['question'], 'running')
     elif type == 'states_mean':
-        jobb = job.JobStatesMean(job_id, data['question'], 'running', webserver.data_ingestor)
+        jobb = job.JobStatesMean(job_id, data['question'], 'running')
 
     webserver.job_queue.put(jobb)
     # Save the job status
@@ -65,11 +65,6 @@ def states_mean_request():
     # Get request data
     data = request.json
     print(f"Got request {data}")
-
-    # TODO
-    # Register job. Don't wait for task to finish
-    # Increment job_id counter
-    # Return associated job_id
 
     request_data = request.json
     id = add_job('states_mean', request_data)
