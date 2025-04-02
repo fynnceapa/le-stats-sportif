@@ -16,7 +16,6 @@ webserver = Flask(__name__)
 job_queue = Queue()
 job_statuses = {}
 shutdown_event = Event()
-job_counter = 0
 
 webserver.counter_lock = Lock()
 webserver.job_counter = 0
@@ -24,7 +23,7 @@ webserver.job_queue = job_queue
 webserver.job_statuses = job_statuses
 webserver.shutdown_event = shutdown_event
 
-webserver.task_runner = ThreadPool(job_queue, job_statuses, shutdown_event)
+webserver.task_runner = ThreadPool(webserver)
 
 webserver.task_runner.start()
 

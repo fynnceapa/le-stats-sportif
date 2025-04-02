@@ -3,10 +3,9 @@ from threading import Thread, Event
 import time
 import os
 import json
-import pandas as pd
 
 class ThreadPool:
-    def __init__(self, queue, job_statuses, graceful_shutdown):
+    def __init__(self, webserver):
         # You must implement a ThreadPool of TaskRunners
         # Your ThreadPool should check if an environment variable TP_NUM_OF_THREADS is defined
         # If the env var is defined, that is the number of threads to be used by the thread pool
@@ -16,9 +15,10 @@ class ThreadPool:
         #   * create more threads than the hardware concurrency allows
         #   * recreate threads for each task
         # Note: the TP_NUM_OF_THREADS env var will be defined by the checker
-        self.queue = queue
-        self.job_statuses = job_statuses
-        self.graceful_shutdown = graceful_shutdown
+        self.webserver = webserver
+        self.queue = webserver.job_queue
+        self.job_statuses = webserver.job_statuses
+        self.graceful_shutdown = webserver.shutdown_event
         
         self.threads = []
 
@@ -42,7 +42,6 @@ class ThreadPool:
 
 class TaskRunner(Thread):
     def __init__(self, queue, job_statuses, graceful_shutdown, id):
-        # TODO: init necessary data structures
         super().__init__()
         self.queue = queue
         self.job_statuses = job_statuses
@@ -52,6 +51,7 @@ class TaskRunner(Thread):
     def save_data(self, data, job_id):
         with open(f'results/{job_id}.json', 'w') as f:
             json.dump(data, f)
+        self.job_statuses[job_id] = "done"
         
     def start_job(self):
         j = self.queue.get()
@@ -64,4 +64,4 @@ class TaskRunner(Thread):
     def run(self):
         while not self.graceful_shutdown.is_set():
             self.start_job()
-    
+        print(f"Thread {self.id} is shutting down")
