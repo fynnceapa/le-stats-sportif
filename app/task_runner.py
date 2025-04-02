@@ -5,6 +5,7 @@ import os
 import json
 
 class ThreadPool:
+    """ThreadPool class to manage a pool of threads for processing jobs."""
     def __init__(self, webserver):
 
         self.webserver = webserver
@@ -33,6 +34,7 @@ class ThreadPool:
             thread.join()
 
 class TaskRunner(Thread):
+    """TaskRunner class to process jobs in the queue."""
     def __init__(self, queue, job_statuses, graceful_shutdown):
         super().__init__()
         self.queue = queue
@@ -43,6 +45,7 @@ class TaskRunner(Thread):
         with open(f'results/{job_id}.json', 'w') as f:
             json.dump(data, f)
         self.job_statuses[job_id] = "done"
+
 
     def start_job(self):
         j = self.queue.get()

@@ -11,7 +11,6 @@ def post_endpoint():
     if request.method == 'POST':
         # Assuming the request contains JSON data
         data = request.json
-        print(f"got data in post {data}")
 
         # Process the received data
         # For demonstration purposes, just echoing back the received data
@@ -26,19 +25,39 @@ def post_endpoint():
 def get_response(job_id):
     """gets the result of a job"""
     if webserver.job_counter < int(job_id):
+        webserver.logger.error(f"Job {job_id} does not exist")
+
         return jsonify({
             'status': 'error',
             'reason': 'Invalid job_id'
         })
+
     result_path = os.path.join('results', f'{job_id}.json')
     if os.path.exists(result_path) and webserver.job_statuses[int(job_id)] == 'done':
         with open(result_path, 'r') as f:
             result = json.load(f)
+
+        webserver.logger.info(f"Job {job_id} finished, returning result with code 200")
+
         return jsonify({'status': 'done', 'data': result})
+
+    webserver.logger.info(f"Job {job_id} is still running, cannot return result")
+
     return jsonify({'status': 'running'})
+
+@webserver.route('/api/jobs', methods=['GET'])
+def get_jobs():
+    """gets the status of all jobs"""
+    jobs = {}
+    for job_id, status in webserver.job_statuses.items():
+        jobs[job_id] = status
+    webserver.logger.info(f"Job statuses were requested: {jobs}")
+    return jsonify(jobs)
 
 @webserver.route('/api/graceful_shutdown', methods=['GET'])
 def graceful_shutdown():
+    """gracefully shuts down the server"""
+    webserver.logger.info("Received shutdown request")
     webserver.shutdown_event.set()
     return jsonify({"status": "Shutting down..."})
 
@@ -48,6 +67,9 @@ def add_job(job_type, data):
     with webserver.counter_lock:
         webserver.job_counter += 1
         job_id = webserver.job_counter
+
+    webserver.logger.info(f"Job {job_id} is being added to "
+                          f"the queue: {job_type} for question: {data['question']}")
 
     if job_type == 'best5':
         jobb = job.JobBest5(job_id, data['question'], 'running')
@@ -68,10 +90,12 @@ def add_job(job_type, data):
     elif job_type == 'mean_by_category':
         jobb = job.JobMeanByCategory(job_id, data['question'], 'running')
     else:
+        webserver.logger.error(f"Job {job_id} has an invalid job type: {job_type}")
+        with webserver.counter_lock:
+            webserver.job_counter -= 1
         return jsonify({"error": "Invalid job type"}), 400
 
     webserver.job_queue.put(jobb)
-    # Save the job status
     webserver.job_statuses[job_id] = 'running'
     return job_id
 
