@@ -1,37 +1,37 @@
 from app import webserver
 
-class Job:
+class Job: # pylint: disable=too-few-public-methods
+    """Base class for jobs. Every job inherits this class and implements the do_job method."""
     def __init__(self, job_id, question, status):
         self.job_id = job_id
         self.question = question
         self.status = status
 
     def do_job(self):
-        # subclasses should implement this method
+        """subclasses should implement this method"""
         pass
 
-class JobStatesMean(Job):
-    def __init__(self, job_id, question, status):
-        super().__init__(job_id, question, status)
-
+class JobStatesMean(Job): # pylint: disable=too-few-public-methods
+    """Job to calculate the mean of a question for each state."""
     def do_job(self):
         state_means = {}
         filtered_data = webserver.data_ingestor.data[
             webserver.data_ingestor.data['Question'] == self.question]
+
         for state in filtered_data['LocationDesc']:
             state_data = filtered_data[filtered_data['LocationDesc'] == state]
             state_mean = state_data['Data_Value'].mean()
             state_means[state] = state_mean
+
         sorted_states = sorted(state_means.items(), key=lambda x: x[1])
+
         result = {}
         for state, mean in sorted_states:
             result[state] = mean
         return result
 
-class JobBest5(Job):
-    def __init__(self, job_id, question, status):
-        super().__init__(job_id, question, status)
-
+class JobBest5(Job): # pylint: disable=too-few-public-methods
+    """Job to calculate the best 5 states for a question"""
     def do_job(self):
         filtered_data = webserver.data_ingestor.data[
             webserver.data_ingestor.data['Question'] == self.question]
@@ -44,14 +44,12 @@ class JobBest5(Job):
 
         filtered_data = filtered_data.head(5)
         result = {}
-        for index, row in filtered_data.iterrows():
-            result[row['LocationDesc']] = row['Data_Value']
+        for row in filtered_data.itertuples(index=False):
+            result[row.LocationDesc] = row.Data_Value
         return result
 
-class JobWorst5(Job):
-    def __init__(self, job_id, question, status):
-        super().__init__(job_id, question, status)
-
+class JobWorst5(Job): # pylint: disable=too-few-public-methods
+    """Job to calculate the worst 5 states for a question"""
     def do_job(self):
         filtered_data = webserver.data_ingestor.data[
             webserver.data_ingestor.data['Question'] == self.question]
@@ -64,11 +62,12 @@ class JobWorst5(Job):
 
         filtered_data = filtered_data.head(5)
         result = {}
-        for index, row in filtered_data.iterrows():
-            result[row['LocationDesc']] = row['Data_Value']
+        for row in filtered_data.itertuples(index=False):
+            result[row.LocationDesc] = row.Data_Value
         return result
 
-class JobStateMean(Job):
+class JobStateMean(Job): # pylint: disable=too-few-public-methods
+    """Job to calculate the mean of a question for a specific state."""
     def __init__(self, job_id, question, state, status):
         super().__init__(job_id, question, status)
         self.state = state
@@ -77,32 +76,34 @@ class JobStateMean(Job):
         filtered_data = webserver.data_ingestor.data[
             webserver.data_ingestor.data['Question'] == self.question]
         filtered_data = filtered_data[filtered_data['LocationDesc'] == self.state]
+
         value = 0.0
         count = 0
-        for index, row in filtered_data.iterrows():
-            value += row['Data_Value']
+
+        for row in filtered_data.itertuples(index=False):
+            value += row.Data_Value
             count += 1
+
         mean = value / count
         result = {}
         result[self.state] = mean
         return result
 
-class JobGlobalMean(Job):
-    def __init__(self, job_id, question, status):
-        super().__init__(job_id, question, status)
-
+class JobGlobalMean(Job): # pylint: disable=too-few-public-methods
+    """Job to calculate the global mean of a question."""
     def do_job(self):
         filtered_data = webserver.data_ingestor.data[
             webserver.data_ingestor.data['Question'] == self.question]
         value = 0.0
         count = 0
-        for index, row in filtered_data.iterrows():
-            value += row['Data_Value']
+        for row in filtered_data.itertuples(index = False):
+            value += row.Data_Value
             count += 1
         mean = value / count
         return {"global_mean": mean}
 
-class JobStateMeanByCategory(Job):
+class JobStateMeanByCategory(Job): # pylint: disable=too-few-public-methods
+    """Job to calculate the mean of a question for a specific state and stratification category."""
     def __init__(self, job_id, question, state, status):
         super().__init__(job_id, question, status)
         self.state = state
@@ -123,8 +124,9 @@ class JobStateMeanByCategory(Job):
         formatted_means = {str(k): v for k, v in stratification_means.items()}
 
         return {self.state: formatted_means}
-    
-class JobStateDiffFromMean(Job):
+
+class JobStateDiffFromMean(Job): # pylint: disable=too-few-public-methods
+    """Job to calculate the difference between the global mean and the state mean for a question"""
     def __init__(self, job_id, question, state, status):
         super().__init__(job_id, question, status)
         self.state = state
@@ -140,43 +142,41 @@ class JobStateDiffFromMean(Job):
         result[self.state] = diff
         return result
 
-class JobDiffFromMean(Job):
-    def __init__(self, job_id, question, status):
-        super().__init__(job_id, question, status)
-
+class JobDiffFromMean(Job): # pylint: disable=too-few-public-methods
+    """Job to calculate the difference between the global mean and the state means for a question."""
     def do_job(self):
         filtered_data = webserver.data_ingestor.data[
             webserver.data_ingestor.data['Question'] == self.question]
+
         global_mean = filtered_data['Data_Value'].mean()
+
         state_means = {}
         for state in filtered_data['LocationDesc']:
             state_data = filtered_data[filtered_data['LocationDesc'] == state]
             state_mean = state_data['Data_Value'].mean()
             state_means[state] = state_mean
+
         diff_from_mean = {}
         for state, mean in state_means.items():
             diff_from_mean[state] = global_mean - mean
         return diff_from_mean
 
-class JobMeanByCategory(Job):
-    def __init__(self, job_id, question, status):
-        super().__init__(job_id, question, status)
-
+class JobMeanByCategory(Job): # pylint: disable=too-few-public-methods
+    """Job to calculate the mean of a question for each state and stratification category."""
     def do_job(self):
         filtered_data = webserver.data_ingestor.data[
             webserver.data_ingestor.data['Question'] == self.question]
-        
+
         stratification_means = (
             filtered_data
             .groupby(['LocationDesc', 'StratificationCategory1', 'Stratification1'])['Data_Value']
             .mean()
             .to_dict()
         )
-        
+
         formatted_means = {
             str((state, stratification_category, stratification)): v
             for (state, stratification_category, stratification), v in stratification_means.items()
         }
-        
-        return formatted_means
 
+        return formatted_means

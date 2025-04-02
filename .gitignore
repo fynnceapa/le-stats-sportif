@@ -4,6 +4,7 @@ __pycache__/
 *.so
 
 results/
+app/1-le-stats-sportif.code-workspace
 
 venv/
 build/

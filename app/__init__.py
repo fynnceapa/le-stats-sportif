@@ -2,7 +2,7 @@ import os
 import logging
 import time
 from queue import Queue
-from threading import Thread, Event, Lock
+from threading import Event, Lock
 from logging.handlers import RotatingFileHandler
 from flask import Flask
 from app.task_runner import ThreadPool
@@ -32,4 +32,3 @@ webserver.data_ingestor = DataIngestor("./nutrition_activity_obesity_usa_subset.
 webserver.job_counter = 1
 
 from app import routes
-
