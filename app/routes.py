@@ -1,9 +1,8 @@
 import os
 import json
-from app import webserver
-from app import job
-from flask import request, jsonify
 from threading import Lock
+from flask import request, jsonify
+from app import webserver, job
 
 lock = Lock()
 
@@ -66,10 +65,9 @@ def graceful_shutdown():
     webserver.shutdown_event.set()
     webserver.task_runner.shutdown()
 
-    if webserver.job_queue().empty():
+    if webserver.job_queue.empty():
         return jsonify({'status': 'done'})
-    else:
-        return jsonify({"status": 'running',})
+    return jsonify({"status": 'running',})
 
 @webserver.route('/api/num_jobs', methods=['GET'])
 def num_jobs():
@@ -127,13 +125,12 @@ def check_add_job_return(i):
             'status': 'error',
             'reason': 'invalid job type'
         })
-    elif i == -2:
+    if i == -2:
         return jsonify({
             'status': 'error',
             'reason': 'shutting down'
         })
-    else:
-        return jsonify({"job_id": i})
+    return jsonify({"job_id": i})
 
 @webserver.route('/api/states_mean', methods=['POST'])
 def states_mean_request():
