@@ -6,6 +6,8 @@ __pycache__/
 results/
 app/1-le-stats-sportif.code-workspace
 file.log
+app.log
+git-log
 
 venv/
 build/

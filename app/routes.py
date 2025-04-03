@@ -3,6 +3,9 @@ import json
 from app import webserver
 from app import job
 from flask import request, jsonify
+from threading import Lock
+
+lock = Lock()
 
 # Example endpoint definition
 @webserver.route('/api/post_endpoint', methods=['POST'])
@@ -48,25 +51,43 @@ def get_response(job_id):
 @webserver.route('/api/jobs', methods=['GET'])
 def get_jobs():
     """gets the status of all jobs"""
-    jobs = {}
-    for job_id, status in webserver.job_statuses.items():
-        jobs[job_id] = status
-    webserver.logger.info(f"Job statuses were requested: {jobs}")
-    return jsonify(jobs)
+    jobs = []
+    for job_id in range(webserver.job_counter):
+        if job_id in webserver.job_statuses:
+            status = webserver.job_statuses[job_id]
+            jobs.append({f"job_id_{job_id}": status})
+    webserver.logger.info(f"Returning job statuses: {jobs}")
+    return jsonify({'status': 'done','data': jobs})
 
 @webserver.route('/api/graceful_shutdown', methods=['GET'])
 def graceful_shutdown():
     """gracefully shuts down the server"""
     webserver.logger.info("Received shutdown request")
     webserver.shutdown_event.set()
-    return jsonify({"status": "Shutting down..."})
+    webserver.task_runner.shutdown()
+
+    if webserver.job_queue().empty():
+        return jsonify({'status': 'done'})
+    else:
+        return jsonify({"status": 'running',})
+
+@webserver.route('/api/num_jobs', methods=['GET'])
+def num_jobs():
+    """returns the number of jobs in the queue"""
+    num_jobs = webserver.job_queue.qsize()
+    webserver.logger.info(f"Number of jobs in the queue: {num_jobs}")
+    return jsonify({"num_jobs": num_jobs})
 
 def add_job(job_type, data):
     """adds a job to the queue in threadpool"""
+    if webserver.shutdown_event.is_set():
+        webserver.logger.error("Server is down, cannot add new jobs")
+        return -2
+
     job_id = 0
-    with webserver.counter_lock:
-        webserver.job_counter += 1
+    with lock:
         job_id = webserver.job_counter
+        webserver.job_counter += 1
 
     webserver.logger.info(f"Job {job_id} is being added to "
                           f"the queue: {job_type} for question: {data['question']}")
@@ -93,74 +114,89 @@ def add_job(job_type, data):
         webserver.logger.error(f"Job {job_id} has an invalid job type: {job_type}")
         with webserver.counter_lock:
             webserver.job_counter -= 1
-        return jsonify({"error": "Invalid job type"}), 400
+        return -1
 
     webserver.job_queue.put(jobb)
     webserver.job_statuses[job_id] = 'running'
     return job_id
+
+def check_add_job_return(i):
+    """checks the return value of add_job and returns the appropriate response"""
+    if i == -1:
+        return jsonify({
+            'status': 'error',
+            'reason': 'invalid job type'
+        })
+    elif i == -2:
+        return jsonify({
+            'status': 'error',
+            'reason': 'shutting down'
+        })
+    else:
+        return jsonify({"job_id": i})
 
 @webserver.route('/api/states_mean', methods=['POST'])
 def states_mean_request():
     """gets the mean of a question for all states"""
     request_data = request.json
     i = add_job('states_mean', request_data)
-    return jsonify({"job_id": i})
+    return check_add_job_return(i)
 
 @webserver.route('/api/state_mean', methods=['POST'])
 def state_mean_request():
     """gets the mean of a question for a specific state"""
     request_data = request.json
     i = add_job('state_mean', request_data)
-    return jsonify({"job_id": i})
+    return check_add_job_return(i)
 
 @webserver.route('/api/best5', methods=['POST'])
 def best5_request():
     """gets the best 5 states for a question"""
     request_data = request.json
     i = add_job('best5', request_data)
-    return jsonify({"job_id": i})
+    return check_add_job_return(i)
 
 @webserver.route('/api/worst5', methods=['POST'])
 def worst5_request():
     """gets the worst 5 states for a question"""
     request_data = request.json
     i = add_job('worst5', request_data)
-    return jsonify({"job_id": i})
+    return check_add_job_return(i)
 
 @webserver.route('/api/global_mean', methods=['POST'])
 def global_mean_request():
     """gets the global mean of a question"""
     request_data = request.json
     i = add_job('global_mean', request_data)
-    return jsonify({"job_id": i})
+    return check_add_job_return(i)
 
 @webserver.route('/api/diff_from_mean', methods=['POST'])
 def diff_from_mean_request():
     """gets the difference from the mean of a question"""
     request_data = request.json
     i = add_job('diff_from_mean', request_data)
-    return jsonify({"job_id": i})
+    return check_add_job_return(i)
 
 @webserver.route('/api/state_diff_from_mean', methods=['POST'])
 def state_diff_from_mean_request():
     """gets the difference from the mean of a question for a specific state"""
     request_data = request.json
     i = add_job('state_diff_from_mean', request_data)
-    return jsonify({"job_id": i})
+    return check_add_job_return(i)
 
 @webserver.route('/api/mean_by_category', methods=['POST'])
 def mean_by_category_request():
     """gets the mean of a question for a specific state and stratification category"""
     request_data = request.json
     i = add_job('mean_by_category', request_data)
-    return jsonify({"job_id": i})
+    return check_add_job_return(i)
 
 @webserver.route('/api/state_mean_by_category', methods=['POST'])
 def state_mean_by_category_request():
     """gets the mean of a question for a specific state and stratification category"""
     request_data = request.json
     i = add_job('state_mean_by_category', request_data)
-    return jsonify({"job_id": i})
+    return check_add_job_return(i)
 
 # You can check localhost in your browser to see what this displays
 @webserver.route('/')

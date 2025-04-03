@@ -30,7 +30,6 @@ job_queue = Queue()
 job_statuses = {}
 shutdown_event = Event()
 
-webserver.counter_lock = Lock()
 webserver.job_counter = 0
 webserver.job_queue = job_queue
 webserver.job_statuses = job_statuses
