@@ -15,18 +15,20 @@ class JobStatesMean(Job): # pylint: disable=too-few-public-methods
     """Job to calculate the mean of a question for each state."""
     def do_job(self):
         state_means = {}
+
+        # Get the data for the specific question
         filtered_data = webserver.data_ingestor.data[
             webserver.data_ingestor.data['Question'] == self.question]
 
+        # group by each state n get the mean
         for state in filtered_data['LocationDesc']:
             state_data = filtered_data[filtered_data['LocationDesc'] == state]
             state_mean = state_data['Data_Value'].mean()
             state_means[state] = state_mean
 
-        sorted_states = sorted(state_means.items(), key=lambda x: x[1])
-
+        # get the mean for each state in a dictionary so it can be jsonified later
         result = {}
-        for state, mean in sorted_states:
+        for state, mean in state_means.items():
             result[state] = mean
         return result
 
@@ -35,15 +37,21 @@ class JobBest5(Job): # pylint: disable=too-few-public-methods
     def do_job(self):
         filtered_data = webserver.data_ingestor.data[
             webserver.data_ingestor.data['Question'] == self.question]
+        
+        # group by each state n get the mean
         filtered_data = filtered_data.groupby('LocationDesc')['Data_Value'].mean().reset_index()
 
+        # check the type of question so the data can be sorted
         if self.question in webserver.data_ingestor.questions_best_is_min:
             filtered_data = filtered_data.sort_values(by='Data_Value', ascending=True)
         else:
             filtered_data = filtered_data.sort_values(by='Data_Value', ascending=False)
 
         filtered_data = filtered_data.head(5)
+
+
         result = {}
+        # intertuples is used to get the data in a dictionary format
         for row in filtered_data.itertuples(index=False):
             result[row.LocationDesc] = row.Data_Value
         return result
@@ -51,6 +59,7 @@ class JobBest5(Job): # pylint: disable=too-few-public-methods
 class JobWorst5(Job): # pylint: disable=too-few-public-methods
     """Job to calculate the worst 5 states for a question"""
     def do_job(self):
+        # basically the same as best5
         filtered_data = webserver.data_ingestor.data[
             webserver.data_ingestor.data['Question'] == self.question]
         filtered_data = filtered_data.groupby('LocationDesc')['Data_Value'].mean().reset_index()
@@ -75,31 +84,23 @@ class JobStateMean(Job): # pylint: disable=too-few-public-methods
     def do_job(self):
         filtered_data = webserver.data_ingestor.data[
             webserver.data_ingestor.data['Question'] == self.question]
+        # i get the data for the specific state
         filtered_data = filtered_data[filtered_data['LocationDesc'] == self.state]
 
-        value = 0.0
-        count = 0
+        # i get the mean for the specific state
+        mean = filtered_data['Data_Value'].mean()
 
-        for row in filtered_data.itertuples(index=False):
-            value += row.Data_Value
-            count += 1
-
-        mean = value / count
-        result = {}
-        result[self.state] = mean
-        return result
+        return {self.state: mean}
 
 class JobGlobalMean(Job): # pylint: disable=too-few-public-methods
     """Job to calculate the global mean of a question."""
     def do_job(self):
         filtered_data = webserver.data_ingestor.data[
             webserver.data_ingestor.data['Question'] == self.question]
-        value = 0.0
-        count = 0
-        for row in filtered_data.itertuples(index = False):
-            value += row.Data_Value
-            count += 1
-        mean = value / count
+
+        # get the mean for the specific question
+        mean = filtered_data['Data_Value'].mean()
+
         return {"global_mean": mean}
 
 class JobStateMeanByCategory(Job): # pylint: disable=too-few-public-methods
@@ -134,10 +135,14 @@ class JobStateDiffFromMean(Job): # pylint: disable=too-few-public-methods
     def do_job(self):
         filtered_data = webserver.data_ingestor.data[
             webserver.data_ingestor.data['Question'] == self.question]
+
         global_mean = filtered_data['Data_Value'].mean()
+
         filtered_data = filtered_data[filtered_data['LocationDesc'] == self.state]
         state_mean = filtered_data['Data_Value'].mean()
+
         diff = global_mean - state_mean
+
         result = {}
         result[self.state] = diff
         return result

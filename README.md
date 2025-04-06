@@ -1,15 +1,19 @@
 # Tema 1 ASC - Stan Andrei Razvan - 333CA
 
 ### Intro
+[git repo](https://github.com/fynnceapa/le-stats-sportif)
+
 Am avut de implementat o aplicatie client-server care sa gestioneze multiple request-uri.
-  Acest lucru trebuie facut intr-o maniera multi-threaded.
+Acest lucru trebuie facut intr-o maniera multi-threaded.
+
+Timp de implementare ~ **6 ore**.
 
 ### Fisiere
 ```__init__.py``` - fisierul init.
 
 ```task_runner.py``` - contine impletarea pentru ThreadPool.
 
-```app/routes.py``` - acest fisier contine rutele pentru Flask.
+```routes.py``` - acest fisier contine rutele pentru Flask.
 
 ```job.py``` - clasele pentru diferitele tipuri de job-uri.
 
@@ -33,6 +37,27 @@ In ThreadPool am scris doua metode, cea de start care porneste thread-urile si o
 
 In ThreadPool se salveaza si statusurile job-urilor.
 
-----
+---
 
-Clasa **TaskRunner** este clasa care proceseaza job-ul, practic este clasa pentru thread-uri. 
+Clasa **TaskRunner** este clasa care proceseaza job-ul, practic este clasa pentru thread-uri.
+
+Metoda **start_job** ia un job din queue, apeleaza metoda do_job si salveaza rezultatul pe disc.
+
+---
+
+**Sincronizarea** este asigurata de catre job_id-uri. Job_counter este o variabila care indica ce job se proceseaza. Aceasta este incrementata de fiecare data cand se adauga un job in queue (lucru tratat in routes.py). Prima data am crezut ca va trebui sa incrementez acest counter intr-o zona critica, dar dupa am realizat ca, datorita faptului ca eu adaug task-urile in routes, acest lucru nu va fi multi-threaded.
+
+Totusi, pentru a fi sigur ca thread-urile vor lucra sincronizat, in momentul in care un thread scoate un job din queue, acest lucru este facut intr-o zona critica folosind un lock initializat in ThreadPool si pasat catre toate thread-urile.
+
+### Routes
+
+In routes se intampla mare parte din functionalitatea temei. Functia **add_job** este cea care se ocupa de adaugarea job-urilor in queue-ul threadpool-ului.
+
+Conform cerintei, dupa ce se da shutdown nu mai pot fi adaugate job-uri (adica rutele POST) dar putem folosi rutele de GET pentru a vedea rezultatul unui job, numarul de job-uri etc.
+
+Pe langa rutele care erau deja in schelet am mai adaugat si /api/graceful_shutdown, /api/num_jobs, /api/jobs.
+
+### Logging
+
+Am "log-uit" tot ce se intampla in routes, practic sunt logate toate cererile primite de la client catre server.
+
