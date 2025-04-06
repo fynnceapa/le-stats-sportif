@@ -83,9 +83,8 @@ def add_job(job_type, data):
         return -2
 
     job_id = 0
-    with lock:
-        job_id = webserver.job_counter
-        webserver.job_counter += 1
+    job_id = webserver.job_counter
+    webserver.job_counter += 1
 
     webserver.logger.info(f"Job {job_id} is being added to "
                           f"the queue: {job_type} for question: {data['question']}")

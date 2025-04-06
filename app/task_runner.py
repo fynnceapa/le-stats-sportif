@@ -1,16 +1,16 @@
 from queue import Queue
-from threading import Thread
+from threading import Thread, Lock
 import os
 import json
 
 class ThreadPool:
     """ThreadPool class to manage a pool of threads for processing jobs."""
-    def __init__(self, webserver):
+    def __init__(self, queue, job_statuses, graceful_shutdown):
 
-        self.webserver = webserver
-        self.queue = webserver.job_queue
-        self.job_statuses = webserver.job_statuses
-        self.graceful_shutdown = webserver.shutdown_event
+        self.queue = queue
+        self.job_statuses = job_statuses
+        self.graceful_shutdown = graceful_shutdown
+        self.lock = Lock()
 
         self.threads = []
 
@@ -19,7 +19,7 @@ class ThreadPool:
         else:
             num_threads = os.cpu_count()
         for i in range(num_threads):
-            thread = TaskRunner(self.queue, self.job_statuses, self.graceful_shutdown, i)
+            thread = TaskRunner(self.queue, self.job_statuses, self.graceful_shutdown, i, self.lock)
             self.threads.append(thread)
 
     def start(self):
@@ -35,11 +35,12 @@ class ThreadPool:
 
 class TaskRunner(Thread):
     """TaskRunner class to process jobs in the queue."""
-    def __init__(self, queue, job_statuses, graceful_shutdown, i):
+    def __init__(self, queue, job_statuses, graceful_shutdown, i, lock):
         super().__init__()
         self.queue = queue
         self.job_statuses = job_statuses
         self.graceful_shutdown = graceful_shutdown
+        self.lock = lock
         self.id = i
 
     def save_data(self, data, job_id):
@@ -50,7 +51,8 @@ class TaskRunner(Thread):
 
     def start_job(self):
         """Start a job from the queue."""
-        j = self.queue.get()
+        with self.lock:
+            j = self.queue.get()
         if j is None:
             return
         job_id = j.job_id
@@ -61,4 +63,3 @@ class TaskRunner(Thread):
         """Run the task runner."""
         while not self.graceful_shutdown.is_set():
             self.start_job()
-        print(f"Thread {self.id} shutting down gracefully.")

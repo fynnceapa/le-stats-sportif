@@ -1,344 +1,338 @@
-2025-04-03 20:04:34 - INFO - Server started
-2025-04-03 20:04:37 - INFO - Job 1 is being added to the queue: best5 for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week
-2025-04-03 20:04:37 - INFO - Job 1 is still running, cannot return result
-2025-04-03 20:04:37 - INFO - Job 1 finished, returning result with code 200
-2025-04-03 20:04:37 - INFO - Job 2 is being added to the queue: best5 for question: Percent of adults who report consuming fruit less than one time daily
-2025-04-03 20:04:37 - INFO - Job 2 is still running, cannot return result
-2025-04-03 20:04:37 - INFO - Job 2 finished, returning result with code 200
-2025-04-03 20:04:37 - INFO - Job 3 is being added to the queue: best5 for question: Percent of adults who report consuming vegetables less than one time daily
-2025-04-03 20:04:37 - INFO - Job 3 is still running, cannot return result
-2025-04-03 20:04:37 - INFO - Job 3 finished, returning result with code 200
-2025-04-03 20:04:37 - INFO - Job 4 is being added to the queue: best5 for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:37 - INFO - Job 4 is still running, cannot return result
-2025-04-03 20:04:37 - INFO - Job 4 finished, returning result with code 200
-2025-04-03 20:04:37 - INFO - Job 5 is being added to the queue: best5 for question: Percent of adults aged 18 years and older who have obesity
-2025-04-03 20:04:37 - INFO - Job 5 is still running, cannot return result
-2025-04-03 20:04:38 - INFO - Job 5 finished, returning result with code 200
-2025-04-03 20:04:38 - INFO - Job 6 is being added to the queue: best5 for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:38 - INFO - Job 6 is still running, cannot return result
-2025-04-03 20:04:38 - INFO - Job 6 finished, returning result with code 200
-2025-04-03 20:04:38 - INFO - Job 7 is being added to the queue: best5 for question: Percent of adults aged 18 years and older who have an overweight classification
-2025-04-03 20:04:38 - INFO - Job 7 is still running, cannot return result
-2025-04-03 20:04:38 - INFO - Job 7 finished, returning result with code 200
-2025-04-03 20:04:38 - INFO - Job 8 is being added to the queue: best5 for question: Percent of adults who engage in muscle-strengthening activities on 2 or more days a week
-2025-04-03 20:04:38 - INFO - Job 8 is still running, cannot return result
-2025-04-03 20:04:38 - INFO - Job 8 finished, returning result with code 200
-2025-04-03 20:04:38 - INFO - Job 9 is being added to the queue: best5 for question: Percent of adults who engage in no leisure-time physical activity
-2025-04-03 20:04:38 - INFO - Job 9 is still running, cannot return result
-2025-04-03 20:04:39 - INFO - Job 9 finished, returning result with code 200
-2025-04-03 20:04:41 - INFO - Job 10 is being added to the queue: diff_from_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week
-2025-04-03 20:04:41 - INFO - Job 10 is still running, cannot return result
-2025-04-03 20:04:41 - INFO - Job 10 finished, returning result with code 200
-2025-04-03 20:04:41 - INFO - Job 11 is being added to the queue: diff_from_mean for question: Percent of adults who report consuming fruit less than one time daily
-2025-04-03 20:04:41 - INFO - Job 11 is still running, cannot return result
-2025-04-03 20:04:41 - INFO - Job 11 finished, returning result with code 200
-2025-04-03 20:04:41 - INFO - Job 12 is being added to the queue: diff_from_mean for question: Percent of adults who report consuming vegetables less than one time daily
-2025-04-03 20:04:41 - INFO - Job 12 is still running, cannot return result
-2025-04-03 20:04:41 - INFO - Job 12 finished, returning result with code 200
-2025-04-03 20:04:41 - INFO - Job 13 is being added to the queue: diff_from_mean for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:41 - INFO - Job 13 is still running, cannot return result
-2025-04-03 20:04:42 - INFO - Job 13 finished, returning result with code 200
-2025-04-03 20:04:42 - INFO - Job 14 is being added to the queue: diff_from_mean for question: Percent of adults aged 18 years and older who have obesity
-2025-04-03 20:04:42 - INFO - Job 14 is still running, cannot return result
-2025-04-03 20:04:42 - INFO - Job 14 is still running, cannot return result
-2025-04-03 20:04:42 - INFO - Job 14 is still running, cannot return result
-2025-04-03 20:04:42 - INFO - Job 14 finished, returning result with code 200
-2025-04-03 20:04:42 - INFO - Job 15 is being added to the queue: diff_from_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:42 - INFO - Job 15 is still running, cannot return result
-2025-04-03 20:04:42 - INFO - Job 15 finished, returning result with code 200
-2025-04-03 20:04:42 - INFO - Job 16 is being added to the queue: diff_from_mean for question: Percent of adults aged 18 years and older who have an overweight classification
-2025-04-03 20:04:42 - INFO - Job 16 is still running, cannot return result
-2025-04-03 20:04:43 - INFO - Job 16 is still running, cannot return result
-2025-04-03 20:04:43 - INFO - Job 16 is still running, cannot return result
-2025-04-03 20:04:43 - INFO - Job 16 finished, returning result with code 200
-2025-04-03 20:04:43 - INFO - Job 17 is being added to the queue: diff_from_mean for question: Percent of adults who engage in muscle-strengthening activities on 2 or more days a week
-2025-04-03 20:04:43 - INFO - Job 17 is still running, cannot return result
-2025-04-03 20:04:43 - INFO - Job 17 finished, returning result with code 200
-2025-04-03 20:04:43 - INFO - Job 18 is being added to the queue: diff_from_mean for question: Percent of adults who engage in no leisure-time physical activity
-2025-04-03 20:04:43 - INFO - Job 18 is still running, cannot return result
-2025-04-03 20:04:43 - INFO - Job 18 is still running, cannot return result
-2025-04-03 20:04:44 - INFO - Job 18 is still running, cannot return result
-2025-04-03 20:04:44 - INFO - Job 18 finished, returning result with code 200
-2025-04-03 20:04:44 - INFO - Job 19 is being added to the queue: global_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week
-2025-04-03 20:04:44 - INFO - Job 19 is still running, cannot return result
-2025-04-03 20:04:44 - INFO - Job 19 finished, returning result with code 200
-2025-04-03 20:04:44 - INFO - Job 20 is being added to the queue: global_mean for question: Percent of adults who report consuming fruit less than one time daily
-2025-04-03 20:04:44 - INFO - Job 20 is still running, cannot return result
-2025-04-03 20:04:44 - INFO - Job 20 finished, returning result with code 200
-2025-04-03 20:04:44 - INFO - Job 21 is being added to the queue: global_mean for question: Percent of adults who report consuming vegetables less than one time daily
-2025-04-03 20:04:44 - INFO - Job 21 is still running, cannot return result
-2025-04-03 20:04:45 - INFO - Job 21 finished, returning result with code 200
-2025-04-03 20:04:45 - INFO - Job 22 is being added to the queue: global_mean for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:45 - INFO - Job 22 is still running, cannot return result
-2025-04-03 20:04:45 - INFO - Job 22 finished, returning result with code 200
-2025-04-03 20:04:45 - INFO - Job 23 is being added to the queue: global_mean for question: Percent of adults aged 18 years and older who have obesity
-2025-04-03 20:04:45 - INFO - Job 23 is still running, cannot return result
-2025-04-03 20:04:45 - INFO - Job 23 finished, returning result with code 200
-2025-04-03 20:04:45 - INFO - Job 24 is being added to the queue: global_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:45 - INFO - Job 24 is still running, cannot return result
-2025-04-03 20:04:45 - INFO - Job 24 finished, returning result with code 200
-2025-04-03 20:04:45 - INFO - Job 25 is being added to the queue: global_mean for question: Percent of adults aged 18 years and older who have an overweight classification
-2025-04-03 20:04:45 - INFO - Job 25 is still running, cannot return result
-2025-04-03 20:04:45 - INFO - Job 25 finished, returning result with code 200
-2025-04-03 20:04:45 - INFO - Job 26 is being added to the queue: global_mean for question: Percent of adults who engage in muscle-strengthening activities on 2 or more days a week
-2025-04-03 20:04:46 - INFO - Job 26 is still running, cannot return result
-2025-04-03 20:04:46 - INFO - Job 26 finished, returning result with code 200
-2025-04-03 20:04:46 - INFO - Job 27 is being added to the queue: global_mean for question: Percent of adults who engage in no leisure-time physical activity
-2025-04-03 20:04:46 - INFO - Job 27 is still running, cannot return result
-2025-04-03 20:04:46 - INFO - Job 27 finished, returning result with code 200
-2025-04-03 20:04:46 - INFO - Job 28 is being added to the queue: mean_by_category for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week
-2025-04-03 20:04:46 - INFO - Job 28 is still running, cannot return result
-2025-04-03 20:04:46 - INFO - Job 28 finished, returning result with code 200
-2025-04-03 20:04:46 - INFO - Job 29 is being added to the queue: mean_by_category for question: Percent of adults who report consuming fruit less than one time daily
-2025-04-03 20:04:46 - INFO - Job 29 is still running, cannot return result
-2025-04-03 20:04:46 - INFO - Job 29 finished, returning result with code 200
-2025-04-03 20:04:46 - INFO - Job 30 is being added to the queue: mean_by_category for question: Percent of adults who report consuming vegetables less than one time daily
-2025-04-03 20:04:46 - INFO - Job 30 is still running, cannot return result
-2025-04-03 20:04:47 - INFO - Job 30 finished, returning result with code 200
-2025-04-03 20:04:47 - INFO - Job 31 is being added to the queue: mean_by_category for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:47 - INFO - Job 31 is still running, cannot return result
-2025-04-03 20:04:47 - INFO - Job 31 finished, returning result with code 200
-2025-04-03 20:04:47 - INFO - Job 32 is being added to the queue: mean_by_category for question: Percent of adults aged 18 years and older who have obesity
-2025-04-03 20:04:47 - INFO - Job 32 is still running, cannot return result
-2025-04-03 20:04:47 - INFO - Job 32 finished, returning result with code 200
-2025-04-03 20:04:47 - INFO - Job 33 is being added to the queue: mean_by_category for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:47 - INFO - Job 33 is still running, cannot return result
-2025-04-03 20:04:47 - INFO - Job 33 finished, returning result with code 200
-2025-04-03 20:04:47 - INFO - Job 34 is being added to the queue: mean_by_category for question: Percent of adults aged 18 years and older who have an overweight classification
-2025-04-03 20:04:47 - INFO - Job 34 is still running, cannot return result
-2025-04-03 20:04:48 - INFO - Job 34 finished, returning result with code 200
-2025-04-03 20:04:48 - INFO - Job 35 is being added to the queue: mean_by_category for question: Percent of adults who engage in muscle-strengthening activities on 2 or more days a week
-2025-04-03 20:04:48 - INFO - Job 35 is still running, cannot return result
-2025-04-03 20:04:48 - INFO - Job 35 finished, returning result with code 200
-2025-04-03 20:04:48 - INFO - Job 36 is being added to the queue: mean_by_category for question: Percent of adults who engage in no leisure-time physical activity
-2025-04-03 20:04:48 - INFO - Job 36 is still running, cannot return result
-2025-04-03 20:04:48 - INFO - Job 36 finished, returning result with code 200
-2025-04-03 20:04:48 - INFO - Job 37 is being added to the queue: state_diff_from_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:48 - INFO - Job 37 is still running, cannot return result
-2025-04-03 20:04:48 - INFO - Job 37 finished, returning result with code 200
-2025-04-03 20:04:48 - INFO - Job 38 is being added to the queue: state_diff_from_mean for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:48 - INFO - Job 38 is still running, cannot return result
-2025-04-03 20:04:49 - INFO - Job 38 finished, returning result with code 200
-2025-04-03 20:04:49 - INFO - Job 39 is being added to the queue: state_diff_from_mean for question: Percent of adults who report consuming fruit less than one time daily
-2025-04-03 20:04:49 - INFO - Job 39 is still running, cannot return result
-2025-04-03 20:04:49 - INFO - Job 39 finished, returning result with code 200
-2025-04-03 20:04:49 - INFO - Job 40 is being added to the queue: state_diff_from_mean for question: Percent of adults who report consuming vegetables less than one time daily
-2025-04-03 20:04:49 - INFO - Job 40 is still running, cannot return result
-2025-04-03 20:04:49 - INFO - Job 40 finished, returning result with code 200
-2025-04-03 20:04:49 - INFO - Job 41 is being added to the queue: state_diff_from_mean for question: Percent of adults who report consuming vegetables less than one time daily
-2025-04-03 20:04:49 - INFO - Job 41 is still running, cannot return result
-2025-04-03 20:04:49 - INFO - Job 41 finished, returning result with code 200
-2025-04-03 20:04:49 - INFO - Job 42 is being added to the queue: state_diff_from_mean for question: Percent of adults who report consuming fruit less than one time daily
-2025-04-03 20:04:49 - INFO - Job 42 is still running, cannot return result
-2025-04-03 20:04:49 - INFO - Job 42 finished, returning result with code 200
-2025-04-03 20:04:49 - INFO - Job 43 is being added to the queue: state_diff_from_mean for question: Percent of adults who report consuming vegetables less than one time daily
-2025-04-03 20:04:49 - INFO - Job 43 is still running, cannot return result
-2025-04-03 20:04:50 - INFO - Job 43 finished, returning result with code 200
-2025-04-03 20:04:50 - INFO - Job 44 is being added to the queue: state_diff_from_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:50 - INFO - Job 44 is still running, cannot return result
-2025-04-03 20:04:50 - INFO - Job 44 finished, returning result with code 200
-2025-04-03 20:04:50 - INFO - Job 45 is being added to the queue: state_diff_from_mean for question: Percent of adults who report consuming fruit less than one time daily
-2025-04-03 20:04:50 - INFO - Job 45 is still running, cannot return result
-2025-04-03 20:04:50 - INFO - Job 45 finished, returning result with code 200
-2025-04-03 20:04:50 - INFO - Job 46 is being added to the queue: state_diff_from_mean for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:50 - INFO - Job 46 is still running, cannot return result
-2025-04-03 20:04:50 - INFO - Job 46 finished, returning result with code 200
-2025-04-03 20:04:50 - INFO - Job 47 is being added to the queue: state_diff_from_mean for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:50 - INFO - Job 47 is still running, cannot return result
-2025-04-03 20:04:51 - INFO - Job 47 finished, returning result with code 200
-2025-04-03 20:04:51 - INFO - Job 48 is being added to the queue: state_diff_from_mean for question: Percent of adults who report consuming vegetables less than one time daily
-2025-04-03 20:04:51 - INFO - Job 48 is still running, cannot return result
-2025-04-03 20:04:51 - INFO - Job 48 finished, returning result with code 200
-2025-04-03 20:04:51 - INFO - Job 49 is being added to the queue: state_diff_from_mean for question: Percent of adults who report consuming vegetables less than one time daily
-2025-04-03 20:04:51 - INFO - Job 49 is still running, cannot return result
-2025-04-03 20:04:51 - INFO - Job 49 finished, returning result with code 200
-2025-04-03 20:04:51 - INFO - Job 50 is being added to the queue: state_diff_from_mean for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:51 - INFO - Job 50 is still running, cannot return result
-2025-04-03 20:04:51 - INFO - Job 50 finished, returning result with code 200
-2025-04-03 20:04:51 - INFO - Job 51 is being added to the queue: state_diff_from_mean for question: Percent of adults who report consuming vegetables less than one time daily
-2025-04-03 20:04:51 - INFO - Job 51 is still running, cannot return result
-2025-04-03 20:04:51 - INFO - Job 51 finished, returning result with code 200
-2025-04-03 20:04:51 - INFO - Job 52 is being added to the queue: state_diff_from_mean for question: Percent of adults who report consuming vegetables less than one time daily
-2025-04-03 20:04:51 - INFO - Job 52 is still running, cannot return result
-2025-04-03 20:04:52 - INFO - Job 52 finished, returning result with code 200
-2025-04-03 20:04:52 - INFO - Job 53 is being added to the queue: state_diff_from_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:52 - INFO - Job 53 is still running, cannot return result
-2025-04-03 20:04:52 - INFO - Job 53 finished, returning result with code 200
-2025-04-03 20:04:52 - INFO - Job 54 is being added to the queue: state_diff_from_mean for question: Percent of adults who report consuming fruit less than one time daily
-2025-04-03 20:04:52 - INFO - Job 54 is still running, cannot return result
-2025-04-03 20:04:52 - INFO - Job 54 finished, returning result with code 200
-2025-04-03 20:04:52 - INFO - Job 55 is being added to the queue: state_diff_from_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:52 - INFO - Job 55 is still running, cannot return result
-2025-04-03 20:04:52 - INFO - Job 55 finished, returning result with code 200
-2025-04-03 20:04:52 - INFO - Job 56 is being added to the queue: state_diff_from_mean for question: Percent of adults who report consuming vegetables less than one time daily
-2025-04-03 20:04:52 - INFO - Job 56 is still running, cannot return result
-2025-04-03 20:04:52 - INFO - Job 56 finished, returning result with code 200
-2025-04-03 20:04:52 - INFO - Job 57 is being added to the queue: state_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:53 - INFO - Job 57 is still running, cannot return result
-2025-04-03 20:04:53 - INFO - Job 57 finished, returning result with code 200
-2025-04-03 20:04:53 - INFO - Job 58 is being added to the queue: state_mean for question: Percent of adults who report consuming fruit less than one time daily
-2025-04-03 20:04:53 - INFO - Job 58 is still running, cannot return result
-2025-04-03 20:04:53 - INFO - Job 58 finished, returning result with code 200
-2025-04-03 20:04:53 - INFO - Job 59 is being added to the queue: state_mean for question: Percent of adults aged 18 years and older who have obesity
-2025-04-03 20:04:53 - INFO - Job 59 is still running, cannot return result
-2025-04-03 20:04:53 - INFO - Job 59 finished, returning result with code 200
-2025-04-03 20:04:53 - INFO - Job 60 is being added to the queue: state_mean for question: Percent of adults who engage in no leisure-time physical activity
-2025-04-03 20:04:53 - INFO - Job 60 is still running, cannot return result
-2025-04-03 20:04:53 - INFO - Job 60 finished, returning result with code 200
-2025-04-03 20:04:53 - INFO - Job 61 is being added to the queue: state_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week
-2025-04-03 20:04:53 - INFO - Job 61 is still running, cannot return result
-2025-04-03 20:04:54 - INFO - Job 61 finished, returning result with code 200
-2025-04-03 20:04:54 - INFO - Job 62 is being added to the queue: state_mean for question: Percent of adults aged 18 years and older who have obesity
-2025-04-03 20:04:54 - INFO - Job 62 is still running, cannot return result
-2025-04-03 20:04:54 - INFO - Job 62 finished, returning result with code 200
-2025-04-03 20:04:54 - INFO - Job 63 is being added to the queue: state_mean for question: Percent of adults who engage in no leisure-time physical activity
-2025-04-03 20:04:54 - INFO - Job 63 is still running, cannot return result
-2025-04-03 20:04:54 - INFO - Job 63 finished, returning result with code 200
-2025-04-03 20:04:54 - INFO - Job 64 is being added to the queue: state_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:54 - INFO - Job 64 is still running, cannot return result
-2025-04-03 20:04:54 - INFO - Job 64 finished, returning result with code 200
-2025-04-03 20:04:54 - INFO - Job 65 is being added to the queue: state_mean for question: Percent of adults aged 18 years and older who have obesity
-2025-04-03 20:04:54 - INFO - Job 65 is still running, cannot return result
-2025-04-03 20:04:55 - INFO - Job 65 finished, returning result with code 200
-2025-04-03 20:04:55 - INFO - Job 66 is being added to the queue: state_mean for question: Percent of adults who report consuming fruit less than one time daily
-2025-04-03 20:04:55 - INFO - Job 66 is still running, cannot return result
-2025-04-03 20:04:55 - INFO - Job 66 finished, returning result with code 200
-2025-04-03 20:04:55 - INFO - Job 67 is being added to the queue: state_mean for question: Percent of adults who report consuming fruit less than one time daily
-2025-04-03 20:04:55 - INFO - Job 67 is still running, cannot return result
-2025-04-03 20:04:55 - INFO - Job 67 finished, returning result with code 200
-2025-04-03 20:04:55 - INFO - Job 68 is being added to the queue: state_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week
-2025-04-03 20:04:55 - INFO - Job 68 is still running, cannot return result
-2025-04-03 20:04:55 - INFO - Job 68 finished, returning result with code 200
-2025-04-03 20:04:55 - INFO - Job 69 is being added to the queue: state_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week
-2025-04-03 20:04:55 - INFO - Job 69 is still running, cannot return result
-2025-04-03 20:04:55 - INFO - Job 69 finished, returning result with code 200
-2025-04-03 20:04:55 - INFO - Job 70 is being added to the queue: state_mean for question: Percent of adults who report consuming fruit less than one time daily
-2025-04-03 20:04:55 - INFO - Job 70 is still running, cannot return result
-2025-04-03 20:04:56 - INFO - Job 70 finished, returning result with code 200
-2025-04-03 20:04:56 - INFO - Job 71 is being added to the queue: state_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week
-2025-04-03 20:04:56 - INFO - Job 71 is still running, cannot return result
-2025-04-03 20:04:56 - INFO - Job 71 finished, returning result with code 200
-2025-04-03 20:04:56 - INFO - Job 72 is being added to the queue: state_mean for question: Percent of adults who engage in no leisure-time physical activity
-2025-04-03 20:04:56 - INFO - Job 72 is still running, cannot return result
-2025-04-03 20:04:56 - INFO - Job 72 finished, returning result with code 200
-2025-04-03 20:04:56 - INFO - Job 73 is being added to the queue: state_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:56 - INFO - Job 73 is still running, cannot return result
-2025-04-03 20:04:56 - INFO - Job 73 finished, returning result with code 200
-2025-04-03 20:04:56 - INFO - Job 74 is being added to the queue: state_mean for question: Percent of adults aged 18 years and older who have obesity
-2025-04-03 20:04:56 - INFO - Job 74 is still running, cannot return result
-2025-04-03 20:04:57 - INFO - Job 74 finished, returning result with code 200
-2025-04-03 20:04:57 - INFO - Job 75 is being added to the queue: state_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:57 - INFO - Job 75 is still running, cannot return result
-2025-04-03 20:04:57 - INFO - Job 75 finished, returning result with code 200
-2025-04-03 20:04:57 - INFO - Job 76 is being added to the queue: state_mean for question: Percent of adults who engage in no leisure-time physical activity
-2025-04-03 20:04:57 - INFO - Job 76 is still running, cannot return result
-2025-04-03 20:04:57 - INFO - Job 76 finished, returning result with code 200
-2025-04-03 20:04:57 - INFO - Job 77 is being added to the queue: state_mean_by_category for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:57 - INFO - Job 77 finished, returning result with code 200
-2025-04-03 20:04:57 - INFO - Job 78 is being added to the queue: state_mean_by_category for question: Percent of adults who engage in no leisure-time physical activity
-2025-04-03 20:04:57 - INFO - Job 78 is still running, cannot return result
-2025-04-03 20:04:57 - INFO - Job 78 finished, returning result with code 200
-2025-04-03 20:04:57 - INFO - Job 79 is being added to the queue: state_mean_by_category for question: Percent of adults who engage in no leisure-time physical activity
-2025-04-03 20:04:57 - INFO - Job 79 finished, returning result with code 200
-2025-04-03 20:04:57 - INFO - Job 80 is being added to the queue: state_mean_by_category for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:57 - INFO - Job 80 is still running, cannot return result
-2025-04-03 20:04:57 - INFO - Job 80 finished, returning result with code 200
-2025-04-03 20:04:57 - INFO - Job 81 is being added to the queue: state_mean_by_category for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:57 - INFO - Job 81 is still running, cannot return result
-2025-04-03 20:04:58 - INFO - Job 81 finished, returning result with code 200
-2025-04-03 20:04:58 - INFO - Job 82 is being added to the queue: state_mean_by_category for question: Percent of adults who engage in no leisure-time physical activity
-2025-04-03 20:04:58 - INFO - Job 82 finished, returning result with code 200
-2025-04-03 20:04:58 - INFO - Job 83 is being added to the queue: state_mean_by_category for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:58 - INFO - Job 83 is still running, cannot return result
-2025-04-03 20:04:58 - INFO - Job 83 finished, returning result with code 200
-2025-04-03 20:04:58 - INFO - Job 84 is being added to the queue: state_mean_by_category for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:58 - INFO - Job 84 finished, returning result with code 200
-2025-04-03 20:04:58 - INFO - Job 85 is being added to the queue: state_mean_by_category for question: Percent of adults who engage in no leisure-time physical activity
-2025-04-03 20:04:58 - INFO - Job 85 is still running, cannot return result
-2025-04-03 20:04:58 - INFO - Job 85 finished, returning result with code 200
-2025-04-03 20:04:58 - INFO - Job 86 is being added to the queue: state_mean_by_category for question: Percent of adults who engage in no leisure-time physical activity
-2025-04-03 20:04:58 - INFO - Job 86 finished, returning result with code 200
-2025-04-03 20:04:58 - INFO - Job 87 is being added to the queue: state_mean_by_category for question: Percent of adults who engage in no leisure-time physical activity
-2025-04-03 20:04:58 - INFO - Job 87 is still running, cannot return result
-2025-04-03 20:04:58 - INFO - Job 87 finished, returning result with code 200
-2025-04-03 20:04:58 - INFO - Job 88 is being added to the queue: state_mean_by_category for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:58 - INFO - Job 88 is still running, cannot return result
-2025-04-03 20:04:59 - INFO - Job 88 finished, returning result with code 200
-2025-04-03 20:04:59 - INFO - Job 89 is being added to the queue: state_mean_by_category for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:59 - INFO - Job 89 finished, returning result with code 200
-2025-04-03 20:04:59 - INFO - Job 90 is being added to the queue: state_mean_by_category for question: Percent of adults who engage in no leisure-time physical activity
-2025-04-03 20:04:59 - INFO - Job 90 finished, returning result with code 200
-2025-04-03 20:04:59 - INFO - Job 91 is being added to the queue: state_mean_by_category for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:59 - INFO - Job 91 is still running, cannot return result
-2025-04-03 20:04:59 - INFO - Job 91 finished, returning result with code 200
-2025-04-03 20:04:59 - INFO - Job 92 is being added to the queue: state_mean_by_category for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:59 - INFO - Job 92 finished, returning result with code 200
-2025-04-03 20:04:59 - INFO - Job 93 is being added to the queue: state_mean_by_category for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:59 - INFO - Job 93 is still running, cannot return result
-2025-04-03 20:04:59 - INFO - Job 93 finished, returning result with code 200
-2025-04-03 20:04:59 - INFO - Job 94 is being added to the queue: state_mean_by_category for question: Percent of adults who engage in no leisure-time physical activity
-2025-04-03 20:04:59 - INFO - Job 94 finished, returning result with code 200
-2025-04-03 20:04:59 - INFO - Job 95 is being added to the queue: state_mean_by_category for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:59 - INFO - Job 95 is still running, cannot return result
-2025-04-03 20:04:59 - INFO - Job 95 finished, returning result with code 200
-2025-04-03 20:04:59 - INFO - Job 96 is being added to the queue: state_mean_by_category for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:04:59 - INFO - Job 96 finished, returning result with code 200
-2025-04-03 20:04:59 - INFO - Job 97 is being added to the queue: states_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week
-2025-04-03 20:04:59 - INFO - Job 97 is still running, cannot return result
-2025-04-03 20:04:59 - INFO - Job 97 finished, returning result with code 200
-2025-04-03 20:04:59 - INFO - Job 98 is being added to the queue: states_mean for question: Percent of adults who report consuming fruit less than one time daily
-2025-04-03 20:04:59 - INFO - Job 98 is still running, cannot return result
-2025-04-03 20:05:00 - INFO - Job 98 finished, returning result with code 200
-2025-04-03 20:05:00 - INFO - Job 99 is being added to the queue: states_mean for question: Percent of adults who report consuming vegetables less than one time daily
-2025-04-03 20:05:00 - INFO - Job 99 is still running, cannot return result
-2025-04-03 20:05:00 - INFO - Job 99 finished, returning result with code 200
-2025-04-03 20:05:00 - INFO - Job 100 is being added to the queue: states_mean for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:05:00 - INFO - Job 100 is still running, cannot return result
-2025-04-03 20:05:00 - INFO - Job 100 finished, returning result with code 200
-2025-04-03 20:05:00 - INFO - Job 101 is being added to the queue: states_mean for question: Percent of adults aged 18 years and older who have obesity
-2025-04-03 20:05:00 - INFO - Job 101 is still running, cannot return result
-2025-04-03 20:05:00 - INFO - Job 101 is still running, cannot return result
-2025-04-03 20:05:01 - INFO - Job 101 is still running, cannot return result
-2025-04-03 20:05:01 - INFO - Job 101 finished, returning result with code 200
-2025-04-03 20:05:01 - INFO - Job 102 is being added to the queue: states_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:05:01 - INFO - Job 102 is still running, cannot return result
-2025-04-03 20:05:01 - INFO - Job 102 finished, returning result with code 200
-2025-04-03 20:05:01 - INFO - Job 103 is being added to the queue: states_mean for question: Percent of adults aged 18 years and older who have an overweight classification
-2025-04-03 20:05:01 - INFO - Job 103 is still running, cannot return result
-2025-04-03 20:05:01 - INFO - Job 103 is still running, cannot return result
-2025-04-03 20:05:01 - INFO - Job 103 is still running, cannot return result
-2025-04-03 20:05:02 - INFO - Job 103 finished, returning result with code 200
-2025-04-03 20:05:02 - INFO - Job 104 is being added to the queue: states_mean for question: Percent of adults who engage in muscle-strengthening activities on 2 or more days a week
-2025-04-03 20:05:02 - INFO - Job 104 is still running, cannot return result
-2025-04-03 20:05:02 - INFO - Job 104 finished, returning result with code 200
-2025-04-03 20:05:02 - INFO - Job 105 is being added to the queue: states_mean for question: Percent of adults who engage in no leisure-time physical activity
-2025-04-03 20:05:02 - INFO - Job 105 is still running, cannot return result
-2025-04-03 20:05:02 - INFO - Job 105 is still running, cannot return result
-2025-04-03 20:05:02 - INFO - Job 105 is still running, cannot return result
-2025-04-03 20:05:02 - INFO - Job 105 finished, returning result with code 200
-2025-04-03 20:05:02 - INFO - Job 106 is being added to the queue: worst5 for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week
-2025-04-03 20:05:02 - INFO - Job 106 is still running, cannot return result
-2025-04-03 20:05:03 - INFO - Job 106 finished, returning result with code 200
-2025-04-03 20:05:03 - INFO - Job 107 is being added to the queue: worst5 for question: Percent of adults who report consuming fruit less than one time daily
-2025-04-03 20:05:03 - INFO - Job 107 finished, returning result with code 200
-2025-04-03 20:05:03 - INFO - Job 108 is being added to the queue: worst5 for question: Percent of adults who report consuming vegetables less than one time daily
-2025-04-03 20:05:03 - INFO - Job 108 is still running, cannot return result
-2025-04-03 20:05:03 - INFO - Job 108 finished, returning result with code 200
-2025-04-03 20:05:03 - INFO - Job 109 is being added to the queue: worst5 for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:05:03 - INFO - Job 109 is still running, cannot return result
-2025-04-03 20:05:03 - INFO - Job 109 finished, returning result with code 200
-2025-04-03 20:05:03 - INFO - Job 110 is being added to the queue: worst5 for question: Percent of adults aged 18 years and older who have obesity
-2025-04-03 20:05:03 - INFO - Job 110 is still running, cannot return result
-2025-04-03 20:05:03 - INFO - Job 110 finished, returning result with code 200
-2025-04-03 20:05:03 - INFO - Job 111 is being added to the queue: worst5 for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
-2025-04-03 20:05:03 - INFO - Job 111 is still running, cannot return result
-2025-04-03 20:05:04 - INFO - Job 111 finished, returning result with code 200
-2025-04-03 20:05:04 - INFO - Job 112 is being added to the queue: worst5 for question: Percent of adults aged 18 years and older who have an overweight classification
-2025-04-03 20:05:04 - INFO - Job 112 is still running, cannot return result
-2025-04-03 20:05:04 - INFO - Job 112 finished, returning result with code 200
-2025-04-03 20:05:04 - INFO - Job 113 is being added to the queue: worst5 for question: Percent of adults who engage in muscle-strengthening activities on 2 or more days a week
-2025-04-03 20:05:04 - INFO - Job 113 is still running, cannot return result
-2025-04-03 20:05:04 - INFO - Job 113 finished, returning result with code 200
-2025-04-03 20:05:04 - INFO - Job 114 is being added to the queue: worst5 for question: Percent of adults who engage in no leisure-time physical activity
-2025-04-03 20:05:04 - INFO - Job 114 is still running, cannot return result
-2025-04-03 20:05:04 - INFO - Job 114 finished, returning result with code 200
+2025-04-06 11:01:24 - INFO - Server started
+2025-04-06 11:01:26 - INFO - Job 1 is being added to the queue: best5 for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week
+2025-04-06 11:01:26 - INFO - Job 1 is still running, cannot return result
+2025-04-06 11:01:27 - INFO - Job 1 finished, returning result with code 200
+2025-04-06 11:01:27 - INFO - Job 2 is being added to the queue: best5 for question: Percent of adults who report consuming fruit less than one time daily
+2025-04-06 11:01:27 - INFO - Job 2 is still running, cannot return result
+2025-04-06 11:01:27 - INFO - Job 2 finished, returning result with code 200
+2025-04-06 11:01:27 - INFO - Job 3 is being added to the queue: best5 for question: Percent of adults who report consuming vegetables less than one time daily
+2025-04-06 11:01:27 - INFO - Job 3 is still running, cannot return result
+2025-04-06 11:01:27 - INFO - Job 3 finished, returning result with code 200
+2025-04-06 11:01:27 - INFO - Job 4 is being added to the queue: best5 for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:27 - INFO - Job 4 is still running, cannot return result
+2025-04-06 11:01:27 - INFO - Job 4 finished, returning result with code 200
+2025-04-06 11:01:27 - INFO - Job 5 is being added to the queue: best5 for question: Percent of adults aged 18 years and older who have obesity
+2025-04-06 11:01:27 - INFO - Job 5 is still running, cannot return result
+2025-04-06 11:01:27 - INFO - Job 5 finished, returning result with code 200
+2025-04-06 11:01:27 - INFO - Job 6 is being added to the queue: best5 for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:27 - INFO - Job 6 is still running, cannot return result
+2025-04-06 11:01:28 - INFO - Job 6 finished, returning result with code 200
+2025-04-06 11:01:28 - INFO - Job 7 is being added to the queue: best5 for question: Percent of adults aged 18 years and older who have an overweight classification
+2025-04-06 11:01:28 - INFO - Job 7 is still running, cannot return result
+2025-04-06 11:01:28 - INFO - Job 7 finished, returning result with code 200
+2025-04-06 11:01:28 - INFO - Job 8 is being added to the queue: best5 for question: Percent of adults who engage in muscle-strengthening activities on 2 or more days a week
+2025-04-06 11:01:28 - INFO - Job 8 is still running, cannot return result
+2025-04-06 11:01:28 - INFO - Job 8 finished, returning result with code 200
+2025-04-06 11:01:28 - INFO - Job 9 is being added to the queue: best5 for question: Percent of adults who engage in no leisure-time physical activity
+2025-04-06 11:01:28 - INFO - Job 9 is still running, cannot return result
+2025-04-06 11:01:28 - INFO - Job 9 finished, returning result with code 200
+2025-04-06 11:01:31 - INFO - Job 10 is being added to the queue: diff_from_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week
+2025-04-06 11:01:31 - INFO - Job 10 is still running, cannot return result
+2025-04-06 11:01:31 - INFO - Job 10 finished, returning result with code 200
+2025-04-06 11:01:31 - INFO - Job 11 is being added to the queue: diff_from_mean for question: Percent of adults who report consuming fruit less than one time daily
+2025-04-06 11:01:31 - INFO - Job 11 is still running, cannot return result
+2025-04-06 11:01:31 - INFO - Job 11 finished, returning result with code 200
+2025-04-06 11:01:31 - INFO - Job 12 is being added to the queue: diff_from_mean for question: Percent of adults who report consuming vegetables less than one time daily
+2025-04-06 11:01:31 - INFO - Job 12 is still running, cannot return result
+2025-04-06 11:01:31 - INFO - Job 12 finished, returning result with code 200
+2025-04-06 11:01:31 - INFO - Job 13 is being added to the queue: diff_from_mean for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:31 - INFO - Job 13 is still running, cannot return result
+2025-04-06 11:01:31 - INFO - Job 13 finished, returning result with code 200
+2025-04-06 11:01:31 - INFO - Job 14 is being added to the queue: diff_from_mean for question: Percent of adults aged 18 years and older who have obesity
+2025-04-06 11:01:31 - INFO - Job 14 is still running, cannot return result
+2025-04-06 11:01:32 - INFO - Job 14 is still running, cannot return result
+2025-04-06 11:01:32 - INFO - Job 14 is still running, cannot return result
+2025-04-06 11:01:32 - INFO - Job 14 finished, returning result with code 200
+2025-04-06 11:01:32 - INFO - Job 15 is being added to the queue: diff_from_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:32 - INFO - Job 15 is still running, cannot return result
+2025-04-06 11:01:32 - INFO - Job 15 finished, returning result with code 200
+2025-04-06 11:01:32 - INFO - Job 16 is being added to the queue: diff_from_mean for question: Percent of adults aged 18 years and older who have an overweight classification
+2025-04-06 11:01:32 - INFO - Job 16 is still running, cannot return result
+2025-04-06 11:01:32 - INFO - Job 16 is still running, cannot return result
+2025-04-06 11:01:33 - INFO - Job 16 is still running, cannot return result
+2025-04-06 11:01:33 - INFO - Job 16 finished, returning result with code 200
+2025-04-06 11:01:33 - INFO - Job 17 is being added to the queue: diff_from_mean for question: Percent of adults who engage in muscle-strengthening activities on 2 or more days a week
+2025-04-06 11:01:33 - INFO - Job 17 is still running, cannot return result
+2025-04-06 11:01:33 - INFO - Job 17 finished, returning result with code 200
+2025-04-06 11:01:33 - INFO - Job 18 is being added to the queue: diff_from_mean for question: Percent of adults who engage in no leisure-time physical activity
+2025-04-06 11:01:33 - INFO - Job 18 is still running, cannot return result
+2025-04-06 11:01:33 - INFO - Job 18 is still running, cannot return result
+2025-04-06 11:01:33 - INFO - Job 18 is still running, cannot return result
+2025-04-06 11:01:34 - INFO - Job 18 finished, returning result with code 200
+2025-04-06 11:01:34 - INFO - Job 19 is being added to the queue: global_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week
+2025-04-06 11:01:34 - INFO - Job 19 is still running, cannot return result
+2025-04-06 11:01:34 - INFO - Job 19 finished, returning result with code 200
+2025-04-06 11:01:34 - INFO - Job 20 is being added to the queue: global_mean for question: Percent of adults who report consuming fruit less than one time daily
+2025-04-06 11:01:34 - INFO - Job 20 is still running, cannot return result
+2025-04-06 11:01:34 - INFO - Job 20 finished, returning result with code 200
+2025-04-06 11:01:34 - INFO - Job 21 is being added to the queue: global_mean for question: Percent of adults who report consuming vegetables less than one time daily
+2025-04-06 11:01:34 - INFO - Job 21 is still running, cannot return result
+2025-04-06 11:01:34 - INFO - Job 21 finished, returning result with code 200
+2025-04-06 11:01:34 - INFO - Job 22 is being added to the queue: global_mean for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:34 - INFO - Job 22 is still running, cannot return result
+2025-04-06 11:01:35 - INFO - Job 22 finished, returning result with code 200
+2025-04-06 11:01:35 - INFO - Job 23 is being added to the queue: global_mean for question: Percent of adults aged 18 years and older who have obesity
+2025-04-06 11:01:35 - INFO - Job 23 is still running, cannot return result
+2025-04-06 11:01:35 - INFO - Job 23 finished, returning result with code 200
+2025-04-06 11:01:35 - INFO - Job 24 is being added to the queue: global_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:35 - INFO - Job 24 is still running, cannot return result
+2025-04-06 11:01:35 - INFO - Job 24 finished, returning result with code 200
+2025-04-06 11:01:35 - INFO - Job 25 is being added to the queue: global_mean for question: Percent of adults aged 18 years and older who have an overweight classification
+2025-04-06 11:01:35 - INFO - Job 25 is still running, cannot return result
+2025-04-06 11:01:35 - INFO - Job 25 finished, returning result with code 200
+2025-04-06 11:01:35 - INFO - Job 26 is being added to the queue: global_mean for question: Percent of adults who engage in muscle-strengthening activities on 2 or more days a week
+2025-04-06 11:01:35 - INFO - Job 26 is still running, cannot return result
+2025-04-06 11:01:35 - INFO - Job 26 finished, returning result with code 200
+2025-04-06 11:01:35 - INFO - Job 27 is being added to the queue: global_mean for question: Percent of adults who engage in no leisure-time physical activity
+2025-04-06 11:01:36 - INFO - Job 27 is still running, cannot return result
+2025-04-06 11:01:36 - INFO - Job 27 finished, returning result with code 200
+2025-04-06 11:01:36 - INFO - Job 28 is being added to the queue: mean_by_category for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week
+2025-04-06 11:01:36 - INFO - Job 28 is still running, cannot return result
+2025-04-06 11:01:36 - INFO - Job 28 finished, returning result with code 200
+2025-04-06 11:01:36 - INFO - Job 29 is being added to the queue: mean_by_category for question: Percent of adults who report consuming fruit less than one time daily
+2025-04-06 11:01:36 - INFO - Job 29 is still running, cannot return result
+2025-04-06 11:01:36 - INFO - Job 29 finished, returning result with code 200
+2025-04-06 11:01:36 - INFO - Job 30 is being added to the queue: mean_by_category for question: Percent of adults who report consuming vegetables less than one time daily
+2025-04-06 11:01:36 - INFO - Job 30 is still running, cannot return result
+2025-04-06 11:01:36 - INFO - Job 30 finished, returning result with code 200
+2025-04-06 11:01:36 - INFO - Job 31 is being added to the queue: mean_by_category for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:36 - INFO - Job 31 is still running, cannot return result
+2025-04-06 11:01:37 - INFO - Job 31 finished, returning result with code 200
+2025-04-06 11:01:37 - INFO - Job 32 is being added to the queue: mean_by_category for question: Percent of adults aged 18 years and older who have obesity
+2025-04-06 11:01:37 - INFO - Job 32 is still running, cannot return result
+2025-04-06 11:01:37 - INFO - Job 32 finished, returning result with code 200
+2025-04-06 11:01:37 - INFO - Job 33 is being added to the queue: mean_by_category for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:37 - INFO - Job 33 is still running, cannot return result
+2025-04-06 11:01:37 - INFO - Job 33 finished, returning result with code 200
+2025-04-06 11:01:37 - INFO - Job 34 is being added to the queue: mean_by_category for question: Percent of adults aged 18 years and older who have an overweight classification
+2025-04-06 11:01:37 - INFO - Job 34 is still running, cannot return result
+2025-04-06 11:01:37 - INFO - Job 34 finished, returning result with code 200
+2025-04-06 11:01:37 - INFO - Job 35 is being added to the queue: mean_by_category for question: Percent of adults who engage in muscle-strengthening activities on 2 or more days a week
+2025-04-06 11:01:37 - INFO - Job 35 is still running, cannot return result
+2025-04-06 11:01:38 - INFO - Job 35 finished, returning result with code 200
+2025-04-06 11:01:38 - INFO - Job 36 is being added to the queue: mean_by_category for question: Percent of adults who engage in no leisure-time physical activity
+2025-04-06 11:01:38 - INFO - Job 36 is still running, cannot return result
+2025-04-06 11:01:38 - INFO - Job 36 finished, returning result with code 200
+2025-04-06 11:01:38 - INFO - Job 37 is being added to the queue: state_diff_from_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:38 - INFO - Job 37 is still running, cannot return result
+2025-04-06 11:01:38 - INFO - Job 37 finished, returning result with code 200
+2025-04-06 11:01:38 - INFO - Job 38 is being added to the queue: state_diff_from_mean for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:38 - INFO - Job 38 is still running, cannot return result
+2025-04-06 11:01:38 - INFO - Job 38 finished, returning result with code 200
+2025-04-06 11:01:38 - INFO - Job 39 is being added to the queue: state_diff_from_mean for question: Percent of adults who report consuming fruit less than one time daily
+2025-04-06 11:01:38 - INFO - Job 39 is still running, cannot return result
+2025-04-06 11:01:39 - INFO - Job 39 finished, returning result with code 200
+2025-04-06 11:01:39 - INFO - Job 40 is being added to the queue: state_diff_from_mean for question: Percent of adults who report consuming vegetables less than one time daily
+2025-04-06 11:01:39 - INFO - Job 40 is still running, cannot return result
+2025-04-06 11:01:39 - INFO - Job 40 finished, returning result with code 200
+2025-04-06 11:01:39 - INFO - Job 41 is being added to the queue: state_diff_from_mean for question: Percent of adults who report consuming vegetables less than one time daily
+2025-04-06 11:01:39 - INFO - Job 41 is still running, cannot return result
+2025-04-06 11:01:39 - INFO - Job 41 finished, returning result with code 200
+2025-04-06 11:01:39 - INFO - Job 42 is being added to the queue: state_diff_from_mean for question: Percent of adults who report consuming fruit less than one time daily
+2025-04-06 11:01:39 - INFO - Job 42 is still running, cannot return result
+2025-04-06 11:01:39 - INFO - Job 42 finished, returning result with code 200
+2025-04-06 11:01:39 - INFO - Job 43 is being added to the queue: state_diff_from_mean for question: Percent of adults who report consuming vegetables less than one time daily
+2025-04-06 11:01:39 - INFO - Job 43 is still running, cannot return result
+2025-04-06 11:01:39 - INFO - Job 43 finished, returning result with code 200
+2025-04-06 11:01:39 - INFO - Job 44 is being added to the queue: state_diff_from_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:39 - INFO - Job 44 is still running, cannot return result
+2025-04-06 11:01:40 - INFO - Job 44 finished, returning result with code 200
+2025-04-06 11:01:40 - INFO - Job 45 is being added to the queue: state_diff_from_mean for question: Percent of adults who report consuming fruit less than one time daily
+2025-04-06 11:01:40 - INFO - Job 45 is still running, cannot return result
+2025-04-06 11:01:40 - INFO - Job 45 finished, returning result with code 200
+2025-04-06 11:01:40 - INFO - Job 46 is being added to the queue: state_diff_from_mean for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:40 - INFO - Job 46 is still running, cannot return result
+2025-04-06 11:01:40 - INFO - Job 46 finished, returning result with code 200
+2025-04-06 11:01:40 - INFO - Job 47 is being added to the queue: state_diff_from_mean for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:40 - INFO - Job 47 is still running, cannot return result
+2025-04-06 11:01:40 - INFO - Job 47 finished, returning result with code 200
+2025-04-06 11:01:40 - INFO - Job 48 is being added to the queue: state_diff_from_mean for question: Percent of adults who report consuming vegetables less than one time daily
+2025-04-06 11:01:40 - INFO - Job 48 is still running, cannot return result
+2025-04-06 11:01:41 - INFO - Job 48 finished, returning result with code 200
+2025-04-06 11:01:41 - INFO - Job 49 is being added to the queue: state_diff_from_mean for question: Percent of adults who report consuming vegetables less than one time daily
+2025-04-06 11:01:41 - INFO - Job 49 is still running, cannot return result
+2025-04-06 11:01:41 - INFO - Job 49 finished, returning result with code 200
+2025-04-06 11:01:41 - INFO - Job 50 is being added to the queue: state_diff_from_mean for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:41 - INFO - Job 50 is still running, cannot return result
+2025-04-06 11:01:41 - INFO - Job 50 finished, returning result with code 200
+2025-04-06 11:01:41 - INFO - Job 51 is being added to the queue: state_diff_from_mean for question: Percent of adults who report consuming vegetables less than one time daily
+2025-04-06 11:01:41 - INFO - Job 51 is still running, cannot return result
+2025-04-06 11:01:41 - INFO - Job 51 finished, returning result with code 200
+2025-04-06 11:01:41 - INFO - Job 52 is being added to the queue: state_diff_from_mean for question: Percent of adults who report consuming vegetables less than one time daily
+2025-04-06 11:01:41 - INFO - Job 52 is still running, cannot return result
+2025-04-06 11:01:41 - INFO - Job 52 finished, returning result with code 200
+2025-04-06 11:01:41 - INFO - Job 53 is being added to the queue: state_diff_from_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:41 - INFO - Job 53 is still running, cannot return result
+2025-04-06 11:01:42 - INFO - Job 53 finished, returning result with code 200
+2025-04-06 11:01:42 - INFO - Job 54 is being added to the queue: state_diff_from_mean for question: Percent of adults who report consuming fruit less than one time daily
+2025-04-06 11:01:42 - INFO - Job 54 finished, returning result with code 200
+2025-04-06 11:01:42 - INFO - Job 55 is being added to the queue: state_diff_from_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:42 - INFO - Job 55 is still running, cannot return result
+2025-04-06 11:01:42 - INFO - Job 55 finished, returning result with code 200
+2025-04-06 11:01:42 - INFO - Job 56 is being added to the queue: state_diff_from_mean for question: Percent of adults who report consuming vegetables less than one time daily
+2025-04-06 11:01:42 - INFO - Job 56 is still running, cannot return result
+2025-04-06 11:01:42 - INFO - Job 56 finished, returning result with code 200
+2025-04-06 11:01:42 - INFO - Job 57 is being added to the queue: state_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:42 - INFO - Job 57 is still running, cannot return result
+2025-04-06 11:01:42 - INFO - Job 57 finished, returning result with code 200
+2025-04-06 11:01:42 - INFO - Job 58 is being added to the queue: state_mean for question: Percent of adults who report consuming fruit less than one time daily
+2025-04-06 11:01:42 - INFO - Job 58 finished, returning result with code 200
+2025-04-06 11:01:42 - INFO - Job 59 is being added to the queue: state_mean for question: Percent of adults aged 18 years and older who have obesity
+2025-04-06 11:01:42 - INFO - Job 59 is still running, cannot return result
+2025-04-06 11:01:43 - INFO - Job 59 finished, returning result with code 200
+2025-04-06 11:01:43 - INFO - Job 60 is being added to the queue: state_mean for question: Percent of adults who engage in no leisure-time physical activity
+2025-04-06 11:01:43 - INFO - Job 60 is still running, cannot return result
+2025-04-06 11:01:43 - INFO - Job 60 finished, returning result with code 200
+2025-04-06 11:01:43 - INFO - Job 61 is being added to the queue: state_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week
+2025-04-06 11:01:43 - INFO - Job 61 is still running, cannot return result
+2025-04-06 11:01:43 - INFO - Job 61 finished, returning result with code 200
+2025-04-06 11:01:43 - INFO - Job 62 is being added to the queue: state_mean for question: Percent of adults aged 18 years and older who have obesity
+2025-04-06 11:01:43 - INFO - Job 62 is still running, cannot return result
+2025-04-06 11:01:43 - INFO - Job 62 finished, returning result with code 200
+2025-04-06 11:01:43 - INFO - Job 63 is being added to the queue: state_mean for question: Percent of adults who engage in no leisure-time physical activity
+2025-04-06 11:01:43 - INFO - Job 63 is still running, cannot return result
+2025-04-06 11:01:43 - INFO - Job 63 finished, returning result with code 200
+2025-04-06 11:01:43 - INFO - Job 64 is being added to the queue: state_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:43 - INFO - Job 64 is still running, cannot return result
+2025-04-06 11:01:44 - INFO - Job 64 finished, returning result with code 200
+2025-04-06 11:01:44 - INFO - Job 65 is being added to the queue: state_mean for question: Percent of adults aged 18 years and older who have obesity
+2025-04-06 11:01:44 - INFO - Job 65 is still running, cannot return result
+2025-04-06 11:01:44 - INFO - Job 65 finished, returning result with code 200
+2025-04-06 11:01:44 - INFO - Job 66 is being added to the queue: state_mean for question: Percent of adults who report consuming fruit less than one time daily
+2025-04-06 11:01:44 - INFO - Job 66 is still running, cannot return result
+2025-04-06 11:01:44 - INFO - Job 66 finished, returning result with code 200
+2025-04-06 11:01:44 - INFO - Job 67 is being added to the queue: state_mean for question: Percent of adults who report consuming fruit less than one time daily
+2025-04-06 11:01:44 - INFO - Job 67 is still running, cannot return result
+2025-04-06 11:01:44 - INFO - Job 67 finished, returning result with code 200
+2025-04-06 11:01:44 - INFO - Job 68 is being added to the queue: state_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week
+2025-04-06 11:01:44 - INFO - Job 68 is still running, cannot return result
+2025-04-06 11:01:45 - INFO - Job 68 finished, returning result with code 200
+2025-04-06 11:01:45 - INFO - Job 69 is being added to the queue: state_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week
+2025-04-06 11:01:45 - INFO - Job 69 is still running, cannot return result
+2025-04-06 11:01:45 - INFO - Job 69 finished, returning result with code 200
+2025-04-06 11:01:45 - INFO - Job 70 is being added to the queue: state_mean for question: Percent of adults who report consuming fruit less than one time daily
+2025-04-06 11:01:45 - INFO - Job 70 is still running, cannot return result
+2025-04-06 11:01:45 - INFO - Job 70 finished, returning result with code 200
+2025-04-06 11:01:45 - INFO - Job 71 is being added to the queue: state_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week
+2025-04-06 11:01:45 - INFO - Job 71 is still running, cannot return result
+2025-04-06 11:01:45 - INFO - Job 71 finished, returning result with code 200
+2025-04-06 11:01:45 - INFO - Job 72 is being added to the queue: state_mean for question: Percent of adults who engage in no leisure-time physical activity
+2025-04-06 11:01:45 - INFO - Job 72 is still running, cannot return result
+2025-04-06 11:01:45 - INFO - Job 72 finished, returning result with code 200
+2025-04-06 11:01:45 - INFO - Job 73 is being added to the queue: state_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:45 - INFO - Job 73 is still running, cannot return result
+2025-04-06 11:01:46 - INFO - Job 73 finished, returning result with code 200
+2025-04-06 11:01:46 - INFO - Job 74 is being added to the queue: state_mean for question: Percent of adults aged 18 years and older who have obesity
+2025-04-06 11:01:46 - INFO - Job 74 is still running, cannot return result
+2025-04-06 11:01:46 - INFO - Job 74 finished, returning result with code 200
+2025-04-06 11:01:46 - INFO - Job 75 is being added to the queue: state_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:46 - INFO - Job 75 is still running, cannot return result
+2025-04-06 11:01:46 - INFO - Job 75 finished, returning result with code 200
+2025-04-06 11:01:46 - INFO - Job 76 is being added to the queue: state_mean for question: Percent of adults who engage in no leisure-time physical activity
+2025-04-06 11:01:46 - INFO - Job 76 is still running, cannot return result
+2025-04-06 11:01:46 - INFO - Job 76 finished, returning result with code 200
+2025-04-06 11:01:46 - INFO - Job 77 is being added to the queue: state_mean_by_category for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:46 - INFO - Job 77 finished, returning result with code 200
+2025-04-06 11:01:46 - INFO - Job 78 is being added to the queue: state_mean_by_category for question: Percent of adults who engage in no leisure-time physical activity
+2025-04-06 11:01:46 - INFO - Job 78 is still running, cannot return result
+2025-04-06 11:01:47 - INFO - Job 78 finished, returning result with code 200
+2025-04-06 11:01:47 - INFO - Job 79 is being added to the queue: state_mean_by_category for question: Percent of adults who engage in no leisure-time physical activity
+2025-04-06 11:01:47 - INFO - Job 79 finished, returning result with code 200
+2025-04-06 11:01:47 - INFO - Job 80 is being added to the queue: state_mean_by_category for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:47 - INFO - Job 80 finished, returning result with code 200
+2025-04-06 11:01:47 - INFO - Job 81 is being added to the queue: state_mean_by_category for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:47 - INFO - Job 81 finished, returning result with code 200
+2025-04-06 11:01:47 - INFO - Job 82 is being added to the queue: state_mean_by_category for question: Percent of adults who engage in no leisure-time physical activity
+2025-04-06 11:01:47 - INFO - Job 82 finished, returning result with code 200
+2025-04-06 11:01:47 - INFO - Job 83 is being added to the queue: state_mean_by_category for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:47 - INFO - Job 83 finished, returning result with code 200
+2025-04-06 11:01:47 - INFO - Job 84 is being added to the queue: state_mean_by_category for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:47 - INFO - Job 84 finished, returning result with code 200
+2025-04-06 11:01:47 - INFO - Job 85 is being added to the queue: state_mean_by_category for question: Percent of adults who engage in no leisure-time physical activity
+2025-04-06 11:01:47 - INFO - Job 85 finished, returning result with code 200
+2025-04-06 11:01:47 - INFO - Job 86 is being added to the queue: state_mean_by_category for question: Percent of adults who engage in no leisure-time physical activity
+2025-04-06 11:01:47 - INFO - Job 86 finished, returning result with code 200
+2025-04-06 11:01:47 - INFO - Job 87 is being added to the queue: state_mean_by_category for question: Percent of adults who engage in no leisure-time physical activity
+2025-04-06 11:01:47 - INFO - Job 87 finished, returning result with code 200
+2025-04-06 11:01:47 - INFO - Job 88 is being added to the queue: state_mean_by_category for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:47 - INFO - Job 88 finished, returning result with code 200
+2025-04-06 11:01:47 - INFO - Job 89 is being added to the queue: state_mean_by_category for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:47 - INFO - Job 89 finished, returning result with code 200
+2025-04-06 11:01:47 - INFO - Job 90 is being added to the queue: state_mean_by_category for question: Percent of adults who engage in no leisure-time physical activity
+2025-04-06 11:01:47 - INFO - Job 90 is still running, cannot return result
+2025-04-06 11:01:47 - INFO - Job 90 finished, returning result with code 200
+2025-04-06 11:01:47 - INFO - Job 91 is being added to the queue: state_mean_by_category for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:47 - INFO - Job 91 finished, returning result with code 200
+2025-04-06 11:01:47 - INFO - Job 92 is being added to the queue: state_mean_by_category for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:47 - INFO - Job 92 is still running, cannot return result
+2025-04-06 11:01:47 - INFO - Job 92 finished, returning result with code 200
+2025-04-06 11:01:47 - INFO - Job 93 is being added to the queue: state_mean_by_category for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:47 - INFO - Job 93 is still running, cannot return result
+2025-04-06 11:01:47 - INFO - Job 93 finished, returning result with code 200
+2025-04-06 11:01:47 - INFO - Job 94 is being added to the queue: state_mean_by_category for question: Percent of adults who engage in no leisure-time physical activity
+2025-04-06 11:01:47 - INFO - Job 94 finished, returning result with code 200
+2025-04-06 11:01:47 - INFO - Job 95 is being added to the queue: state_mean_by_category for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:47 - INFO - Job 95 is still running, cannot return result
+2025-04-06 11:01:48 - INFO - Job 95 finished, returning result with code 200
+2025-04-06 11:01:48 - INFO - Job 96 is being added to the queue: state_mean_by_category for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:48 - INFO - Job 96 finished, returning result with code 200
+2025-04-06 11:01:48 - INFO - Job 97 is being added to the queue: states_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week
+2025-04-06 11:01:48 - INFO - Job 97 is still running, cannot return result
+2025-04-06 11:01:48 - INFO - Job 97 finished, returning result with code 200
+2025-04-06 11:01:48 - INFO - Job 98 is being added to the queue: states_mean for question: Percent of adults who report consuming fruit less than one time daily
+2025-04-06 11:01:48 - INFO - Job 98 is still running, cannot return result
+2025-04-06 11:01:48 - INFO - Job 98 finished, returning result with code 200
+2025-04-06 11:01:48 - INFO - Job 99 is being added to the queue: states_mean for question: Percent of adults who report consuming vegetables less than one time daily
+2025-04-06 11:01:48 - INFO - Job 99 is still running, cannot return result
+2025-04-06 11:01:48 - INFO - Job 99 finished, returning result with code 200
+2025-04-06 11:01:48 - INFO - Job 100 is being added to the queue: states_mean for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:48 - INFO - Job 100 is still running, cannot return result
+2025-04-06 11:01:48 - INFO - Job 100 finished, returning result with code 200
+2025-04-06 11:01:48 - INFO - Job 101 is being added to the queue: states_mean for question: Percent of adults aged 18 years and older who have obesity
+2025-04-06 11:01:48 - INFO - Job 101 is still running, cannot return result
+2025-04-06 11:01:49 - INFO - Job 101 is still running, cannot return result
+2025-04-06 11:01:49 - INFO - Job 101 is still running, cannot return result
+2025-04-06 11:01:49 - INFO - Job 101 finished, returning result with code 200
+2025-04-06 11:01:49 - INFO - Job 102 is being added to the queue: states_mean for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:49 - INFO - Job 102 is still running, cannot return result
+2025-04-06 11:01:49 - INFO - Job 102 finished, returning result with code 200
+2025-04-06 11:01:49 - INFO - Job 103 is being added to the queue: states_mean for question: Percent of adults aged 18 years and older who have an overweight classification
+2025-04-06 11:01:49 - INFO - Job 103 is still running, cannot return result
+2025-04-06 11:01:50 - INFO - Job 103 is still running, cannot return result
+2025-04-06 11:01:50 - INFO - Job 103 is still running, cannot return result
+2025-04-06 11:01:50 - INFO - Job 103 finished, returning result with code 200
+2025-04-06 11:01:50 - INFO - Job 104 is being added to the queue: states_mean for question: Percent of adults who engage in muscle-strengthening activities on 2 or more days a week
+2025-04-06 11:01:50 - INFO - Job 104 is still running, cannot return result
+2025-04-06 11:01:50 - INFO - Job 104 finished, returning result with code 200
+2025-04-06 11:01:50 - INFO - Job 105 is being added to the queue: states_mean for question: Percent of adults who engage in no leisure-time physical activity
+2025-04-06 11:01:50 - INFO - Job 105 is still running, cannot return result
+2025-04-06 11:01:50 - INFO - Job 105 is still running, cannot return result
+2025-04-06 11:01:51 - INFO - Job 105 is still running, cannot return result
+2025-04-06 11:01:51 - INFO - Job 105 finished, returning result with code 200
+2025-04-06 11:01:51 - INFO - Job 106 is being added to the queue: worst5 for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week
+2025-04-06 11:01:51 - INFO - Job 106 is still running, cannot return result
+2025-04-06 11:01:51 - INFO - Job 106 finished, returning result with code 200
+2025-04-06 11:01:51 - INFO - Job 107 is being added to the queue: worst5 for question: Percent of adults who report consuming fruit less than one time daily
+2025-04-06 11:01:51 - INFO - Job 107 is still running, cannot return result
+2025-04-06 11:01:51 - INFO - Job 107 finished, returning result with code 200
+2025-04-06 11:01:51 - INFO - Job 108 is being added to the queue: worst5 for question: Percent of adults who report consuming vegetables less than one time daily
+2025-04-06 11:01:51 - INFO - Job 108 is still running, cannot return result
+2025-04-06 11:01:51 - INFO - Job 108 finished, returning result with code 200
+2025-04-06 11:01:51 - INFO - Job 109 is being added to the queue: worst5 for question: Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:51 - INFO - Job 109 is still running, cannot return result
+2025-04-06 11:01:52 - INFO - Job 109 finished, returning result with code 200
+2025-04-06 11:01:52 - INFO - Job 110 is being added to the queue: worst5 for question: Percent of adults aged 18 years and older who have obesity
+2025-04-06 11:01:52 - INFO - Job 110 is still running, cannot return result
+2025-04-06 11:01:52 - INFO - Job 110 finished, returning result with code 200
+2025-04-06 11:01:52 - INFO - Job 111 is being added to the queue: worst5 for question: Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)
+2025-04-06 11:01:52 - INFO - Job 111 is still running, cannot return result
+2025-04-06 11:01:52 - INFO - Job 111 finished, returning result with code 200
+2025-04-06 11:01:52 - INFO - Job 112 is being added to the queue: worst5 for question: Percent of adults aged 18 years and older who have an overweight classification
+2025-04-06 11:01:52 - INFO - Job 112 is still running, cannot return result
+2025-04-06 11:01:52 - INFO - Job 112 finished, returning result with code 200
+2025-04-06 11:01:52 - INFO - Job 113 is being added to the queue: worst5 for question: Percent of adults who engage in muscle-strengthening activities on 2 or more days a week
+2025-04-06 11:01:52 - INFO - Job 113 is still running, cannot return result
+2025-04-06 11:01:53 - INFO - Job 113 finished, returning result with code 200
+2025-04-06 11:01:53 - INFO - Job 114 is being added to the queue: worst5 for question: Percent of adults who engage in no leisure-time physical activity
+2025-04-06 11:01:53 - INFO - Job 114 is still running, cannot return result
+2025-04-06 11:01:53 - INFO - Job 114 finished, returning result with code 200
