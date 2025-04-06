@@ -1,3 +1,27 @@
+commit 20a6d4e0a92f9a838a6565a2949e1f1d3f563c8c
+Author: Stan Andrei Razvan <andreirazvan922@gmail.com>
+Date:   Sun Apr 6 11:35:22 2025 +0300
+
+    comments + readme
+
+commit 33dd4f6d0cd16abe6f5238882feab744f456f59e
+Author: Stan Andrei Razvan <andreirazvan922@gmail.com>
+Date:   Sun Apr 6 11:25:38 2025 +0300
+
+    rewritten statesmean, globalmen, statemean + added some comments
+
+commit 0fed952cd6b255d4542ba65b8aa671697c25454f
+Author: Stan Andrei Razvan <andreirazvan922@gmail.com>
+Date:   Sun Apr 6 11:03:57 2025 +0300
+
+    removed lock from routes and moved it to start_job + readme
+
+commit a8a586bc7264bf556ad0e68cf1042a682bf54876
+Author: Stan Andrei Razvan <andreirazvan922@gmail.com>
+Date:   Fri Apr 4 20:56:21 2025 +0300
+
+    removed nutrition csv from repo
+
 commit ebb35c92f0968c0488d9fbeddba0746569652dbc
 Author: Stan Andrei Razvan <andreirazvan922@gmail.com>
 Date:   Thu Apr 3 20:05:49 2025 +0300
