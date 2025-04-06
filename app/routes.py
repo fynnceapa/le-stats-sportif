@@ -78,6 +78,7 @@ def num_jobs():
 
 def add_job(job_type, data):
     """adds a job to the queue in threadpool"""
+
     if webserver.shutdown_event.is_set():
         webserver.logger.error("Server is down, cannot add new jobs")
         return -2
@@ -115,10 +116,13 @@ def add_job(job_type, data):
 
     webserver.job_queue.put(jobb)
     webserver.job_statuses[job_id] = 'running'
+
     return job_id
 
 def check_add_job_return(i):
     """checks the return value of add_job and returns the appropriate response"""
+
+    # i am using this so that i can use the same function for all the routes even errors or smth
     if i == -1:
         return jsonify({
             'status': 'error',

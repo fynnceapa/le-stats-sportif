@@ -61,3 +61,4 @@ Pe langa rutele care erau deja in schelet am mai adaugat si /api/graceful_shutdo
 
 Am "log-uit" tot ce se intampla in routes, practic sunt logate toate cererile primite de la client catre server.
 
+Am adaugat log-uri si in cazul unor erori. Fiind prima data cand am facut asta nu am stiut cat de detaliate sa le fac.

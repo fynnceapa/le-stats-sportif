@@ -122,6 +122,7 @@ class JobStateMeanByCategory(Job): # pylint: disable=too-few-public-methods
             .to_dict()
         )
 
+        # format the data so i can jsonify it 
         formatted_means = {str(k): v for k, v in stratification_means.items()}
 
         return {self.state: formatted_means}
